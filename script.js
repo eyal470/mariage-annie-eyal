@@ -1,10 +1,10 @@
 const weddingDate = new Date("2026-12-13T17:00:00").getTime();
 
-function updateCountdown() {
+function updateCountdown(){
   const now = new Date().getTime();
   const distance = weddingDate - now;
 
-  if (distance <= 0) {
+  if(distance <= 0){
     document.getElementById("days").textContent = "0";
     document.getElementById("hours").textContent = "0";
     document.getElementById("minutes").textContent = "0";
@@ -25,12 +25,17 @@ function updateCountdown() {
     Math.floor((distance / 1000) % 60);
 }
 
+function showRsvpThanks(){
+  setTimeout(function(){
+    const form = document.querySelector(".rsvp-form");
+    const thanks = document.getElementById("rsvpThanks");
+
+    if(form && thanks){
+      form.style.display = "none";
+      thanks.style.display = "block";
+    }
+  }, 700);
+}
+
 updateCountdown();
 setInterval(updateCountdown, 1000);
-
-function showRsvpThanks() {
-  setTimeout(() => {
-    document.querySelector('.rsvp-form').style.display = 'none';
-    document.getElementById('rsvpThanks').style.display = 'block';
-  }, 500);
-}
