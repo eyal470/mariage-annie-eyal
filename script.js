@@ -27,3 +27,10 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+function showRsvpThanks() {
+  setTimeout(() => {
+    document.querySelector('.rsvp-form').style.display = 'none';
+    document.getElementById('rsvpThanks').style.display = 'block';
+  }, 500);
+}
