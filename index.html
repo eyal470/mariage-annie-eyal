@@ -4,148 +4,148 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mariage Annie & Eyal</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2.0" />
 </head>
 
 <body>
+  <audio id="weddingMusic" src="music.mp3" loop></audio>
 
-<audio id="weddingMusic" src="music.mp3" loop></audio>
+  <button id="musicBtn" class="music-player" onclick="toggleMusic()" type="button">
+    <span id="musicIcon" class="music-icon">♪</span>
+    <span class="music-copy">
+      <strong>Notre chanson</strong>
+      <small id="musicText">Écouter</small>
+    </span>
+  </button>
 
-<button id="musicBtn" class="music-btn" onclick="toggleMusic()">
-  ▶ Notre musique
-</button>
-  
-<header class="hero">
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content">
-    <img class="logo" src="logo.png" alt="Logo Annie et Eyal" />
-    <h1>Annie & Eyal</h1>
-    <p class="date">13 décembre 2026</p>
-    <p class="place">Maisons-Alfort</p>
-    <div class="hero-scroll">↓</div>
-  </div>
-</header>
-
-<main>
-
-<section class="intro-section">
-  <img class="couple-photo" src="nous.png" alt="Annie et Eyal" />
-
-  <h2>Bienvenue</h2>
-  <p>C’est avec une immense joie que nous vous accueillons sur le site de notre mariage.</p>
-  <p>Vous y trouverez toutes les informations utiles concernant nos deux célébrations, ainsi que le formulaire de confirmation de présence.</p>
-  <p>Merci de faire partie de cette belle aventure. Nous avons hâte de célébrer ces journées inoubliables à vos côtés.</p>
-</section>
-
-<section class="countdown-section">
-  <h2>Nous avons hâte de vous retrouver dans...</h2>
-
-  <div class="countdown">
-    <div class="countdown-card"><span id="days">0</span><small>jours</small></div>
-    <div class="countdown-card"><span id="hours">0</span><small>heures</small></div>
-    <div class="countdown-card"><span id="minutes">0</span><small>min</small></div>
-    <div class="countdown-card"><span id="seconds">0</span><small>sec</small></div>
-  </div>
-</section>
-
-<section class="celebrations-section">
-  <h2>Les célébrations</h2>
-  <p class="section-subtitle">Deux journées, deux moments forts, une même émotion.</p>
-
-  <div class="cards">
-    <article class="event-card">
-      <span class="event-number">01</span>
-      <h3>Mariage civil</h3>
-      <p class="event-date">Jeudi 10 décembre 2026 à 14H00</p>
-      <p><strong>Mairie de Maisons-Alfort</strong></p>
-      <p>À l’issue de la cérémonie, nous nous retrouverons aux Salons du Moulin Brûlé pour partager un cocktail convivial.</p>
-    </article>
-
-    <article class="event-card">
-      <span class="event-number">02</span>
-      <h3>Mariage religieux</h3>
-      <p class="event-date">Dimanche 13 décembre 2026</p>
-      <p><strong>Salons du Moulin Brûlé – Salle Belle Image</strong></p>
-
-      <ul class="timeline">
-        <li><span>17h00</span>Accueil des invités</li>
-        <li><span>17h30</span>Houppa</li>
-        <li><span>18h30</span>Cocktail</li>
-        <li><span>20h00</span>Dîner</li>
-        <li><span>22h00</span>Soirée dansante</li>
-        <li><span>02h00</span>Fin des festivités</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<section class="info-section">
-  <h2>Informations pratiques</h2>
-
-  <div class="info-grid">
-    <div class="info-box">
-      <h3>Mairie de Maisons-Alfort</h3>
-      <p>Mariage civil & cocktail — jeudi 10 décembre 2026</p>
-      <a class="map-button" href="https://maps.app.goo.gl/G6zufnzUPKHQJ4Wr9" target="_blank">Ouvrir dans Google Maps</a>
+  <header class="hero">
+    <div class="hero-content">
+      <img class="logo" src="logo.png" alt="Logo Annie et Eyal" />
+      <h1>Annie & Eyal</h1>
+      <p class="date">10 & 13 décembre 2026</p>
+      <p class="place">Maisons-Alfort</p>
+      <div class="hero-scroll" aria-hidden="true">↓</div>
     </div>
+  </header>
 
-    <div class="info-box">
-      <h3>Salons du Moulin Brûlé</h3>
-      <p>Cocktail mairie, Houppa, dîner et soirée.</p>
-      <a class="map-button" href="https://maps.app.goo.gl/hR9wGU7F2wJ36SKQ7" target="_blank">Ouvrir dans Google Maps</a>
-    </div>
-  </div>
+  <main>
+    <section class="intro-section">
+      <img class="couple-photo" src="nous.png" alt="Annie et Eyal" />
 
-  <div class="details">
-    <p><strong>Dress code :</strong> une tenue élégante est souhaitée.</p>
-    <p><strong>Stationnement :</strong> Un parking public est disponible à proximité de la Mairie et du Moulin Brûlé.</p>
-  </div>
-</section>
+      <h2>Bienvenue</h2>
+      <p>C’est avec une immense joie que nous vous accueillons sur le site de notre mariage.</p>
+      <p>Vous y trouverez toutes les informations utiles concernant nos deux célébrations, ainsi que le formulaire de confirmation de présence.</p>
+      <p>Merci de faire partie de cette belle aventure. Nous avons hâte de célébrer ces journées inoubliables à vos côtés.</p>
+    </section>
 
-<section id="rsvp" class="rsvp-section">
-  <h2>Confirmation de présence</h2>
-  <p>Merci de confirmer votre présence avant le <strong>15 octobre 2026</strong>.</p>
+    <section class="countdown-section">
+      <h2>Nous avons hâte de vous retrouver dans...</h2>
 
-  <form
-    class="rsvp-form"
-    action="https://script.google.com/macros/s/AKfycbwGCqW6mqo_G4SD4EnlC6eAWY_SbiVunRXSMvp6ylOnwmyRjk0ujJ-hKHcPNoDShLSvig/exec"
-    method="POST"
-    target="hidden_iframe"
-    onsubmit="showRsvpThanks();"
-  >
-    <label>Nom et prénom *</label>
-    <input type="text" name="nom" required />
+      <div class="countdown" aria-label="Compte à rebours">
+        <div class="countdown-card"><span id="days">0</span><small>jours</small></div>
+        <div class="countdown-card"><span id="hours">0</span><small>heures</small></div>
+        <div class="countdown-card"><span id="minutes">0</span><small>min</small></div>
+        <div class="countdown-card"><span id="seconds">0</span><small>sec</small></div>
+      </div>
+    </section>
 
-    <label>Je serais présent au Mariage civil — jeudi 10 décembre 2026</label>
-    <input type="number" name="nbCivil" min="0" value="0" required />
+    <section class="celebrations-section">
+      <h2>Les célébrations</h2>
+      <p class="section-subtitle">Deux journées, deux moments forts, une même émotion.</p>
 
-    <label>Je serais présent au Mariage religieux et réception — dimanche 13 décembre 2026</label>
-    <input type="number" name="nbReligieux" min="0" value="0" required />
+      <div class="cards">
+        <article class="event-card">
+          <span class="event-number">01</span>
+          <h3>Mariage civil</h3>
+          <p class="event-date">Jeudi 10 décembre 2026</p>
+          <p><strong>Mairie de Maisons-Alfort</strong></p>
+          <p>À l’issue de la cérémonie, nous nous retrouverons aux Salons du Moulin Brûlé pour partager un cocktail convivial.</p>
+        </article>
 
-    <label>Un petit mot pour les mariés</label>
-    <textarea name="message" rows="4"></textarea>
+        <article class="event-card">
+          <span class="event-number">02</span>
+          <h3>Mariage religieux</h3>
+          <p class="event-date">Dimanche 13 décembre 2026</p>
+          <p><strong>Salons du Moulin Brûlé – Salle Belle Image</strong></p>
 
-    <button type="submit">Confirmer ma présence</button>
-  </form>
+          <ul class="timeline">
+            <li><span>17h00</span>Accueil des invités</li>
+            <li><span>17h30</span>Houppa</li>
+            <li><span>18h30</span>Cocktail</li>
+            <li><span>20h00</span>Dîner</li>
+            <li><span>22h00</span>Soirée dansante</li>
+            <li><span>02h00</span>Fin des festivités</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-  <iframe name="hidden_iframe" style="display:none;"></iframe>
+    <section class="info-section">
+      <h2>Informations pratiques</h2>
 
-  <div id="rsvpThanks">
-    <h3>Merci ❤️</h3>
-    <p>Votre réponse a bien été enregistrée.</p>
-  </div>
-</section>
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>Mairie de Maisons-Alfort</h3>
+          <p>Mariage civil – jeudi 10 décembre 2026</p>
+          <a class="map-button" href="https://maps.app.goo.gl/G6zufnzUPKHQJ4Wr9" target="_blank" rel="noopener">Ouvrir dans Google Maps</a>
+        </div>
 
-<section class="thanks-section">
-  <h2>Merci</h2>
-  <p>Merci de partager avec nous ces deux journées si importantes.</p>
-  <p>Votre présence est le plus beau des cadeaux.</p>
-  <p class="signature">Annie & Eyal</p>
-</section>
+        <div class="info-box">
+          <h3>Salons du Moulin Brûlé</h3>
+          <p>Mariage religieux, cocktail, dîner et soirée.</p>
+          <a class="map-button" href="https://maps.app.goo.gl/hR9wGU7F2wJ36SKQ7" target="_blank" rel="noopener">Ouvrir dans Google Maps</a>
+        </div>
+      </div>
 
-</main>
+      <div class="details">
+        <p><strong>Dress code :</strong> une tenue élégante est souhaitée.</p>
+        <p><strong>Stationnement :</strong> les informations détaillées seront précisées prochainement.</p>
+      </div>
+    </section>
 
-<script src="script.js"></script>
+    <section id="rsvp" class="rsvp-section">
+      <h2>Confirmation de présence</h2>
+      <p>Merci de confirmer votre présence avant le <strong>15 octobre 2026</strong>.</p>
+
+      <form
+        class="rsvp-form"
+        action="https://script.google.com/macros/s/AKfycbwGCqW6mqo_G4SD4EnlC6eAWY_SbiVunRXSMvp6ylOnwmyRjk0ujJ-hKHcPNoDShLSvig/exec"
+        method="POST"
+        target="hidden_iframe"
+        onsubmit="showRsvpThanks();"
+      >
+        <label>Nom et prénom *</label>
+        <input type="text" name="nom" autocomplete="name" required />
+
+        <label>Je serai présent au mariage civil et au cocktail — jeudi 10 décembre 2026</label>
+        <input type="number" name="nbCivil" min="0" value="0" required />
+
+        <label>Je serai présent au mariage religieux et à la réception — dimanche 13 décembre 2026</label>
+        <input type="number" name="nbReligieux" min="0" value="0" required />
+
+        <label>Un petit mot pour les mariés</label>
+        <textarea name="message" rows="4"></textarea>
+
+        <button type="submit">Confirmer ma présence</button>
+      </form>
+
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+      <div id="rsvpThanks">
+        <h3>Merci ❤️</h3>
+        <p>Votre réponse a bien été enregistrée.</p>
+        <p>Nous avons hâte de partager ces moments avec vous.</p>
+      </div>
+    </section>
+
+    <section class="thanks-section">
+      <h2>Merci</h2>
+      <p>Merci de partager avec nous ces deux journées si importantes.</p>
+      <p>Votre présence est le plus beau des cadeaux.</p>
+      <p class="signature">Annie & Eyal</p>
+    </section>
+  </main>
+
+  <script src="script.js?v=2.0"></script>
 </body>
 </html>

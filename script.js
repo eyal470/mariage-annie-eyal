@@ -25,6 +25,26 @@ function updateCountdown(){
     Math.floor((distance / 1000) % 60);
 }
 
+let musicPlaying = false;
+
+function toggleMusic(){
+  const music = document.getElementById("weddingMusic");
+  const icon = document.getElementById("musicIcon");
+  const text = document.getElementById("musicText");
+
+  if(!musicPlaying){
+    music.play();
+    musicPlaying = true;
+    icon.classList.add("playing");
+    text.textContent = "En cours";
+  } else {
+    music.pause();
+    musicPlaying = false;
+    icon.classList.remove("playing");
+    text.textContent = "Écouter";
+  }
+}
+
 function showRsvpThanks(){
   setTimeout(function(){
     const form = document.querySelector(".rsvp-form");
@@ -39,20 +59,3 @@ function showRsvpThanks(){
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
-
-let musicPlaying = false;
-
-function toggleMusic(){
-  const music = document.getElementById("weddingMusic");
-  const btn = document.getElementById("musicBtn");
-
-  if(!musicPlaying){
-    music.play();
-    musicPlaying = true;
-    btn.textContent = "⏸ Pause";
-  } else {
-    music.pause();
-    musicPlaying = false;
-    btn.textContent = "▶ Notre musique";
-  }
-}
