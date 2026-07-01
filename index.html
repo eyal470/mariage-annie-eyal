@@ -96,14 +96,42 @@
       </div>
     </section>
 
-    <section id="rsvp" class="rsvp-section">
-      <h2>Confirmation de présence</h2>
-      <p>Merci de confirmer votre présence avant le <strong>15 octobre 2026</strong>.</p>
+<section id="rsvp" class="rsvp-section">
+  <h2>Confirmation de présence</h2>
+  <p>Merci de confirmer votre présence avant le <strong>15 octobre 2026</strong>.</p>
 
-      <a class="rsvp-button" href="https://script.google.com/macros/s/AKfycbwGCqW6mqo_G4SD4EnlC6eAWY_SbiVunRXSMvp6ylOnwmyRjk0ujJ-hKHcPNoDShLSvig/exec" target="_blank" rel="noopener">
-        Confirmer ma présence
-      </a>
-    </section>
+  <form
+    class="rsvp-form"
+    action="https://script.google.com/macros/s/AKfycbwGCqW6mqo_G4SD4EnlC6eAWY_SbiVunRXSMvp6ylOnwmyRjk0ujJ-hKHcPNoDShLSvig/exec"
+    method="POST"
+    target="hidden_iframe"
+    onsubmit="showRsvpThanks();"
+  >
+    <label>Nom et prénom *</label>
+    <input type="text" name="nom" required>
+
+    <label>Mariage civil — jeudi 10 décembre 2026</label>
+    <input type="number" name="nbCivil" min="0" value="0" required>
+
+    <label>Cocktail après la mairie</label>
+    <input type="number" name="nbCocktailMairie" min="0" value="0" required>
+
+    <label>Mariage religieux et réception — dimanche 13 décembre 2026</label>
+    <input type="number" name="nbReligieux" min="0" value="0" required>
+
+    <label>Un petit mot pour les mariés</label>
+    <textarea name="message" rows="4"></textarea>
+
+    <button type="submit" class="rsvp-button">Confirmer ma présence</button>
+  </form>
+
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  <div id="rsvpThanks" style="display:none;">
+    <h3>Merci ❤️</h3>
+    <p>Votre réponse a bien été enregistrée.</p>
+  </div>
+</section>
 
     <section class="thanks-section">
       <h2>Merci</h2>
