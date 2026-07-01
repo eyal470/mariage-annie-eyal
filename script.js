@@ -39,3 +39,20 @@ function showRsvpThanks(){
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+let musicPlaying = false;
+
+function toggleMusic(){
+  const music = document.getElementById("weddingMusic");
+  const btn = document.getElementById("musicBtn");
+
+  if(!musicPlaying){
+    music.play();
+    musicPlaying = true;
+    btn.textContent = "⏸ Pause";
+  } else {
+    music.pause();
+    musicPlaying = false;
+    btn.textContent = "▶ Notre musique";
+  }
+}
