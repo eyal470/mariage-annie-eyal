@@ -341,4 +341,17 @@ section p {
   .countdown-card small {
     font-size: 9px;
   }
+  .hero-scroll{
+  margin-top:48px;
+  font-size:34px;
+  color:white;
+  opacity:.8;
+  animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+  0%,20%,50%,80%,100%{ transform:translateY(0); }
+  40%{ transform:translateY(10px); }
+  60%{ transform:translateY(5px); }
+}
 }
