@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mariage Annie & Eyal</title>
-  <link rel="stylesheet" href="style.css?v=2.0" />
+  <link rel="stylesheet" href="style.css?v=3.0" />
 </head>
 
 <body>
@@ -104,37 +104,69 @@
     </section>
 
     <section id="rsvp" class="rsvp-section">
-      <h2>Confirmation de présence</h2>
-      <p>Merci de confirmer votre présence avant le <strong>15 octobre 2026</strong>.</p>
+      <div class="rsvp-shell">
+        <div class="rsvp-heading">
+          <span class="rsvp-kicker">RSVP</span>
+          <h2>Confirmez votre présence</h2>
+          <p>Merci de nous répondre avant le <strong>15 octobre 2026</strong>.</p>
+        </div>
 
-      <form
-        class="rsvp-form"
-        action="https://script.google.com/macros/s/AKfycbwGCqW6mqo_G4SD4EnlC6eAWY_SbiVunRXSMvp6ylOnwmyRjk0ujJ-hKHcPNoDShLSvig/exec"
-        method="POST"
-        target="hidden_iframe"
-        onsubmit="showRsvpThanks();"
-      >
-        <label>Nom et prénom *</label>
-        <input type="text" name="nom" autocomplete="name" required />
+        <form
+          class="premium-rsvp"
+          action="https://script.google.com/macros/s/AKfycbwGCqW6mqo_G4SD4EnlC6eAWY_SbiVunRXSMvp6ylOnwmyRjk0ujJ-hKHcPNoDShLSvig/exec"
+          method="POST"
+          target="hidden_iframe"
+          onsubmit="return handleRsvpSubmit();"
+        >
+          <div class="field-block">
+            <label for="guestName">Nom et prénom *</label>
+            <input id="guestName" type="text" name="nom" autocomplete="name" placeholder="Votre nom complet" required />
+          </div>
 
-        <label>Je serai présent au mariage civil et au cocktail — jeudi 10 décembre 2026</label>
-        <input type="number" name="nbCivil" min="0" value="0" required />
+          <div class="rsvp-event-card">
+            <div>
+              <span class="event-tag">Jeudi 10 décembre</span>
+              <h3>Mariage civil & cocktail</h3>
+              <p>Mairie de Maisons-Alfort, puis cocktail aux Salons du Moulin Brûlé.</p>
+            </div>
+            <div class="stepper">
+              <button type="button" onclick="changeCount('nbCivil', -1)">−</button>
+              <input id="nbCivil" type="number" name="nbCivil" min="0" value="0" readonly required />
+              <button type="button" onclick="changeCount('nbCivil', 1)">+</button>
+            </div>
+          </div>
 
-        <label>Je serai présent au mariage religieux et à la réception — dimanche 13 décembre 2026</label>
-        <input type="number" name="nbReligieux" min="0" value="0" required />
+          <div class="rsvp-event-card">
+            <div>
+              <span class="event-tag">Dimanche 13 décembre</span>
+              <h3>Mariage religieux & réception</h3>
+              <p>Houppa, cocktail, dîner et soirée aux Salons du Moulin Brûlé.</p>
+            </div>
+            <div class="stepper">
+              <button type="button" onclick="changeCount('nbReligieux', -1)">−</button>
+              <input id="nbReligieux" type="number" name="nbReligieux" min="0" value="0" readonly required />
+              <button type="button" onclick="changeCount('nbReligieux', 1)">+</button>
+            </div>
+          </div>
 
-        <label>Un petit mot pour les mariés</label>
-        <textarea name="message" rows="4"></textarea>
+          <div class="field-block">
+            <label for="message">Un petit mot pour les mariés</label>
+            <textarea id="message" name="message" rows="4" placeholder="Votre message..."></textarea>
+          </div>
 
-        <button type="submit">Confirmer ma présence</button>
-      </form>
+          <p id="rsvpError" class="rsvp-error"></p>
+          <button id="rsvpSubmit" class="rsvp-submit" type="submit">✨ Confirmer ma présence</button>
+        </form>
 
-      <iframe name="hidden_iframe" style="display:none;"></iframe>
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-      <div id="rsvpThanks">
-        <h3>Merci ❤️</h3>
-        <p>Votre réponse a bien été enregistrée.</p>
-        <p>Nous avons hâte de partager ces moments avec vous.</p>
+        <div id="rsvpThanks" class="rsvp-thanks">
+          <div class="thanks-heart">❤️</div>
+          <h3>Merci !</h3>
+          <p>Votre réponse a bien été enregistrée.</p>
+          <p>Nous avons hâte de partager ces moments avec vous.</p>
+          <p class="thanks-signature">Annie & Eyal</p>
+        </div>
       </div>
     </section>
 
@@ -146,6 +178,6 @@
     </section>
   </main>
 
-  <script src="script.js?v=2.0"></script>
+  <script src="script.js?v=3.0"></script>
 </body>
 </html>
