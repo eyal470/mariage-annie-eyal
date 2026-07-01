@@ -26,6 +26,25 @@ h1,h2,h3{
   font-family:'Cormorant Garamond',Georgia,serif;
 }
 
+.top-logo-bar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:72px;
+  background:white;
+  z-index:9998;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 18px rgba(0,0,0,.08);
+}
+
+.top-logo-bar img{
+  height:48px;
+  width:auto;
+}
+
 .hero{
   min-height:88vh;
   background:
@@ -36,18 +55,12 @@ h1,h2,h3{
   align-items:center;
   text-align:center;
   color:white;
-  padding:30px;
+  padding:102px 30px 30px;
 }
 
 .hero-content{
   max-width:820px;
   animation:fadeUp .9s ease both;
-}
-
-.logo{
-  width:115px;
-  margin-bottom:22px;
-  filter:drop-shadow(0 8px 18px rgba(0,0,0,.25));
 }
 
 .hero h1{
@@ -505,25 +518,18 @@ section p{
   margin-top:18px !important;
 }
 
-.thanks-section{
-  padding-bottom:90px;
-}
-
-.signature{
-  font-family:'Cormorant Garamond',Georgia,serif;
-  font-size:36px;
-  color:var(--night);
-  margin-top:22px;
-}
-
 @media(max-width:760px){
-  .hero{
-    min-height:78vh;
-    padding:24px 18px;
+  .top-logo-bar{
+    height:64px;
   }
 
-  .logo{
-    width:92px;
+  .top-logo-bar img{
+    height:42px;
+  }
+
+  .hero{
+    min-height:78vh;
+    padding:94px 18px 24px;
   }
 
   .music-player{
