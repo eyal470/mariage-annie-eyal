@@ -306,3 +306,153 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
     text-align:center;
     border-top:1px solid #ece5d3;
 }
+
+.card-logo{
+  display:flex;
+  justify-content:center;
+  margin:0 0 18px;
+}
+
+.card-logo img{
+  width:82px;
+  height:auto;
+}
+
+.card-symbol{
+  color:var(--gold);
+  font-size:42px;
+  margin:4px 0 16px;
+}
+
+.card-symbol.bouquet{
+  font-size:46px;
+}
+
+.card-symbol.star{
+  font-size:50px;
+}
+
+.luxury-separator{
+  color:var(--gold);
+  font-size:24px;
+  margin:18px auto 28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+}
+
+.luxury-separator:before,
+.luxury-separator:after{
+  content:"";
+  width:90px;
+  height:1px;
+  background:rgba(200,168,107,.55);
+}
+
+.luxury-separator.bottom{
+  margin-top:28px;
+  margin-bottom:22px;
+}
+
+.location-photo{
+  width:100% !important;
+  margin:22px 0 24px !important;
+  border-radius:18px !important;
+  overflow:hidden !important;
+  border:1px solid rgba(200,168,107,.45) !important;
+  box-shadow:0 14px 32px rgba(0,0,0,.12) !important;
+}
+
+.location-photo img{
+  width:100% !important;
+  height:230px !important;
+  display:block !important;
+  object-fit:cover !important;
+}
+
+.luxury-time-block{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  margin:18px auto 22px;
+  color:var(--night);
+}
+
+.luxury-time-block .time-icon{
+  font-size:34px;
+  color:var(--gold);
+}
+
+.luxury-time-block strong{
+  font-size:24px;
+  color:var(--night);
+}
+
+.luxury-time-block span{
+  font-size:18px;
+  color:#5f6675;
+}
+
+.hebrew-blessing-svg{
+  width:100%;
+  max-width:760px;
+  margin:0 auto 4px;
+  overflow:visible;
+}
+
+.hebrew-blessing-svg svg{
+  display:block;
+  width:100%;
+  height:auto;
+  overflow:visible;
+}
+
+.blessing-text{
+  font-family:'Noto Serif Hebrew', serif;
+  font-size:42px;
+  font-weight:700;
+  fill:#172033;
+  letter-spacing:.2px;
+}
+
+.map-button img,
+.waze-button img{
+  width:24px !important;
+  height:24px !important;
+  max-width:24px !important;
+  max-height:24px !important;
+  object-fit:contain !important;
+}
+
+@media(max-width:760px){
+  .card-logo img{
+    width:72px;
+  }
+
+  .card-symbol{
+    font-size:38px;
+  }
+
+  .card-symbol.star{
+    font-size:44px;
+  }
+
+  .location-photo img{
+    height:185px !important;
+  }
+
+  .blessing-text{
+    font-size:34px;
+  }
+
+  .hebrew-blessing-svg{
+    max-width:390px;
+  }
+
+  .luxury-separator:before,
+  .luxury-separator:after{
+    width:60px;
+  }
+}
