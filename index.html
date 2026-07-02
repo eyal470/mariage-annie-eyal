@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mariage Annie & Eyal</title>
-  <link rel="stylesheet" href="style.css?v=5.1" />
+  <link rel="stylesheet" href="style.css?v=6.0" />
 </head>
-
 <body>
   <audio id="weddingMusic" src="music.mp3" loop></audio>
 
@@ -16,7 +15,7 @@
 
   <button id="musicBtn" class="music-player" onclick="toggleMusic()" type="button">
     <span id="musicIcon" class="music-icon">♪</span>
-    <span>
+    <span class="music-copy">
       <strong>Notre chanson</strong>
       <small id="musicText">Écouter</small>
     </span>
@@ -25,18 +24,15 @@
   <header class="hero">
     <div class="hero-content">
       <h1>Annie &amp; Eyal</h1>
-      <p class="hero-hebrew" dir="rtl">אנני &amp; אייל</p>
+      <p class="hebrew-title" dir="rtl">אנני &amp; אייל</p>
       <p class="date">10 &amp; 13 décembre 2026</p>
       <p class="place">Maisons-Alfort</p>
-      <div class="hero-scroll" aria-hidden="true">↓</div>
     </div>
   </header>
 
   <main>
-    <section class="intro-section reveal"><img class="couple-photo" src="nous.png" alt="Annie et Eyal" />
-    </section>
     <section class="countdown-section reveal">
-      <img class="countdown-logo" src="logo.png" alt="Logo Annie et Eyal">
+      <img class="countdown-logo" src="logo.png" alt="Logo Annie et Eyal" />
       <h2>Nous avons hâte de vous retrouver dans...</h2>
       <div class="countdown" aria-label="Compte à rebours">
         <div class="countdown-card"><span id="days">0</span><small>jours</small></div>
@@ -53,55 +49,41 @@
       <div class="invitation-cards">
         <article class="invitation-card">
           <div class="invitation-inner">
-            <p class="invite-names">Annie &amp; Eyal</p>
-            <p class="invite-hebrew" dir="rtl">אנני &amp; אייל</p>
-            <div class="ornament">✦</div>
+            <div class="invite-top">
+              <p class="invite-names">Annie &amp; Eyal</p>
+              <p class="invite-hebrew" dir="rtl">אנני &amp; אייל</p>
+              <div class="ornament"><span></span>✦<span></span></div>
+            </div>
 
             <h3>Mariage civil &amp; cocktail</h3>
             <p class="invite-date">Jeudi 10 décembre 2026</p>
             <p class="invite-place">Mairie de Maisons-Alfort</p>
-            <p class="invite-address">
-            118 Av. du Général de Gaulle<br>
-            94700 Maisons-Alfort
-            </p>
-            
-            <p class="invite-text">
-              À l’issue de la cérémonie, nous nous retrouverons aux Salons du Moulin Brûlé
-              pour partager un cocktail convivial.
-            </p>
-            
-           
-          </div>
-           <div class="map-actions invite-map-actions">
-                <a class="map-button"
-                   href="https://www.google.com/maps/dir/?api=1&destination=118+Av.+du+Général+de+Gaulle,+94700+Maisons-Alfort"
-                   target="_blank">
-                    Itinéraire Google Maps
-                </a>
-            
-                <a class="waze-button"
-                   href="https://waze.com/ul?q=118+Av.+du+Général+de+Gaulle,+94700+Maisons-Alfort&navigate=yes"
-                   target="_blank">
-                    Ouvrir dans Waze
-                </a>
+            <p class="invite-address">118 Av. du Général de Gaulle<br>94700 Maisons-Alfort</p>
+            <p class="invite-text">À l’issue de la cérémonie, nous nous retrouverons aux Salons du Moulin Brûlé pour partager un cocktail convivial.</p>
+
+            <div class="invite-footer">
+              <div class="ornament small"><span></span>✦<span></span></div>
+              <div class="map-actions invite-map-actions">
+                <a class="map-button" href="https://www.google.com/maps/dir/?api=1&destination=118+Av.+du+G%C3%A9n%C3%A9ral+de+Gaulle,+94700+Maisons-Alfort" target="_blank" rel="noopener">Itinéraire Google Maps</a>
+                <a class="waze-button" href="https://waze.com/ul?q=118+Av.+du+G%C3%A9n%C3%A9ral+de+Gaulle,+94700+Maisons-Alfort&navigate=yes" target="_blank" rel="noopener">Ouvrir dans Waze</a>
+              </div>
             </div>
+          </div>
         </article>
 
         <article class="invitation-card">
           <div class="invitation-inner">
-            <p class="invite-names">Annie &amp; Eyal</p>
-            <p class="invite-hebrew" dir="rtl">אנני &amp; אייל</p>
-            <div class="ornament">✦</div>
+            <div class="invite-top">
+              <p class="invite-names">Annie &amp; Eyal</p>
+              <p class="invite-hebrew" dir="rtl">אנני &amp; אייל</p>
+              <div class="ornament"><span></span>✦<span></span></div>
+            </div>
 
             <h3>Houppa &amp; réception</h3>
             <p class="invite-date">Dimanche 13 décembre 2026</p>
             <p class="invite-place">Salons du Moulin Brûlé – Salle Belle Image</p>
-            <p class="invite-address">
-            47 Av. Foch<br>
-            94700 Maisons-Alfort
-            </p>
-            
-           
+            <p class="invite-address">47 Av. Foch<br>94700 Maisons-Alfort</p>
+
             <ul class="timeline invitation-timeline">
               <li><span>17h00</span>Accueil des invités</li>
               <li><span>17h30</span>Houppa</li>
@@ -110,25 +92,18 @@
               <li><span>22h00</span>Soirée dansante</li>
               <li><span>02h00</span>Fin des festivités</li>
             </ul>
-          </div>
-           <div class="map-actions invite-map-actions">
-                <a class="map-button"
-                   href="https://www.google.com/maps/dir/?api=1&destination=47+Av.+Foch,+94700+Maisons-Alfort"
-                   target="_blank">
-                    Itinéraire Google Maps
-                </a>
-            
-                <a class="waze-button"
-                   href="https://waze.com/ul?q=47+Av.+Foch,+94700+Maisons-Alfort&navigate=yes"
-                   target="_blank">
-                    Ouvrir dans Waze
-                </a>
+
+            <div class="invite-footer">
+              <div class="ornament small"><span></span>✦<span></span></div>
+              <div class="map-actions invite-map-actions">
+                <a class="map-button" href="https://www.google.com/maps/dir/?api=1&destination=47+Av.+Foch,+94700+Maisons-Alfort" target="_blank" rel="noopener">Itinéraire Google Maps</a>
+                <a class="waze-button" href="https://waze.com/ul?q=47+Av.+Foch,+94700+Maisons-Alfort&navigate=yes" target="_blank" rel="noopener">Ouvrir dans Waze</a>
+              </div>
             </div>
+          </div>
         </article>
       </div>
     </section>
-
-
 
     <section id="rsvp" class="rsvp-section">
       <div class="rsvp-shell reveal">
@@ -138,35 +113,21 @@
           <p>Merci de nous répondre avant le <strong>15 octobre 2026</strong>.</p>
         </div>
 
-        <form class="premium-rsvp"
-          action="https://script.google.com/macros/s/AKfycbwGCqW6mqo_G4SD4EnlC6eAWY_SbiVunRXSMvp6ylOnwmyRjk0ujJ-hKHcPNoDShLSvig/exec"
-          method="POST"
-          target="hidden_iframe"
-          onsubmit="return handleRsvpSubmit();">
-
+        <form class="premium-rsvp" action="https://script.google.com/macros/s/AKfycbwGCqW6mqo_G4SD4EnlC6eAWY_SbiVunRXSMvp6ylOnwmyRjk0ujJ-hKHcPNoDShLSvig/exec" method="POST" target="hidden_iframe" onsubmit="return handleRsvpSubmit();">
           <div class="field-block">
             <label for="guestName">Nom et prénom *</label>
             <input id="guestName" type="text" name="nom" autocomplete="name" placeholder="Votre nom complet" required />
           </div>
 
-          <div class="rsvp-event-card">
+          <div class="rsvp-event-card" data-event="civil">
             <div class="rsvp-event-text">
               <span class="event-tag">Jeudi 10 décembre</span>
               <h3>Mariage civil &amp; cocktail</h3>
-              <p>Mairie de Maisons-Alfort, puis cocktail aux Salons du Moulin Brûlé.</p>
             </div>
-
             <div class="choice-row">
-              <label class="choice-pill">
-                <input type="radio" name="civilResponse" value="Oui" onchange="toggleEventCount('civil', true)" />
-                <span>Oui</span>
-              </label>
-              <label class="choice-pill">
-                <input type="radio" name="civilResponse" value="Non" onchange="toggleEventCount('civil', false)" />
-                <span>Non, avec regrets</span>
-              </label>
+              <label class="choice-pill"><input type="radio" name="civilResponse" value="Oui" onchange="toggleEventCount('civil', true)"><span>Oui</span></label>
+              <label class="choice-pill"><input type="radio" name="civilResponse" value="Non" onchange="toggleEventCount('civil', false)"><span>Non, avec regrets</span></label>
             </div>
-
             <div id="civilCount" class="count-panel">
               <p>Nombre de personnes</p>
               <div class="stepper">
@@ -177,24 +138,15 @@
             </div>
           </div>
 
-          <div class="rsvp-event-card">
+          <div class="rsvp-event-card" data-event="religieux">
             <div class="rsvp-event-text">
               <span class="event-tag">Dimanche 13 décembre</span>
               <h3>Houppa &amp; réception</h3>
-              <p>Houppa, cocktail, dîner et soirée aux Salons du Moulin Brûlé.</p>
             </div>
-
             <div class="choice-row">
-              <label class="choice-pill">
-                <input type="radio" name="religieuxResponse" value="Oui" onchange="toggleEventCount('religieux', true)" />
-                <span>Oui</span>
-              </label>
-              <label class="choice-pill">
-                <input type="radio" name="religieuxResponse" value="Non" onchange="toggleEventCount('religieux', false)" />
-                <span>Non, avec regrets</span>
-              </label>
+              <label class="choice-pill"><input type="radio" name="religieuxResponse" value="Oui" onchange="toggleEventCount('religieux', true)"><span>Oui</span></label>
+              <label class="choice-pill"><input type="radio" name="religieuxResponse" value="Non" onchange="toggleEventCount('religieux', false)"><span>Non, avec regrets</span></label>
             </div>
-
             <div id="religieuxCount" class="count-panel">
               <p>Nombre de personnes</p>
               <div class="stepper">
@@ -227,6 +179,6 @@
     </section>
   </main>
 
-  <script src="script.js?v=5.1"></script>
+  <script src="script.js?v=6.0"></script>
 </body>
 </html>
