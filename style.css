@@ -243,19 +243,23 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
   }
 }
 
+.luxury-card{
+  overflow:hidden !important;
+}
+
 .location-photo{
-    width:100%;
-    margin:18px 0;
-    border-radius:16px;
-    overflow:hidden;
-    border:1px solid #e7dcc3;
-    box-sizing:border-box;
+  width:100% !important;
+  max-width:100% !important;
+  margin:18px 0 24px !important;
+  border-radius:16px !important;
+  overflow:hidden !important;
+  border:1px solid #e7dcc3 !important;
 }
 
 .location-photo img{
-    display:block;
-    width:100%;
-    max-width:100%;
-    height:170px;
-    object-fit:cover;
+  display:block !important;
+  width:100% !important;
+  max-width:100% !important;
+  height:170px !important;
+  object-fit:cover !important;
 }
