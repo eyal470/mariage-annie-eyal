@@ -111,8 +111,8 @@ section p{font-size:18px;line-height:1.65}
 @media(max-width:370px){.countdown-card{width:58px}.countdown-card span{font-size:24px}.countdown-card small{font-size:9px}}
 
 .countdown-logo{
-  display:block;
-  width:190px;
-  max-width:55%;
-  margin:0 auto 22px;
+    display:block;
+    width:240px;
+    max-width:70%;
+    margin:0 auto 25px;
 }
