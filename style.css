@@ -220,3 +220,25 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
   justify-content:center !important;
   gap:10px !important;
 }
+
+.hebrew-blessing-arc{
+  font-family:'Noto Serif Hebrew', serif;
+  color:#172033;
+  font-size:30px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-align:center;
+  margin:0 auto 28px;
+  max-width:760px;
+  line-height:1.4;
+  transform:rotate(-2deg);
+  text-shadow:0 1px 0 rgba(200,168,107,.25);
+}
+
+@media(max-width:760px){
+  .hebrew-blessing-arc{
+    font-size:22px;
+    line-height:1.45;
+    margin-bottom:24px;
+  }
+}
