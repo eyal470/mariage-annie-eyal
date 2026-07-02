@@ -132,3 +132,46 @@ section p{font-size:18px;line-height:1.65}
     flex-wrap:wrap;
     margin-bottom:25px;
 }
+
+/* ================================
+   Boutons en bas des cartons
+================================ */
+
+.invitation-inner{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+.invite-map-actions{
+    margin-top:auto;
+    padding-top:30px;
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.invitation-card .map-button,
+.invitation-card .waze-button{
+
+    min-width:220px;
+
+    padding:14px 24px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.invitation-card .map-button:hover,
+.invitation-card .waze-button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 22px rgba(0,0,0,.18);
+
+}
