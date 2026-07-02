@@ -242,3 +242,23 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
     margin-bottom:24px;
   }
 }
+
+.location-photo{
+    margin:22px 0 24px;
+    overflow:hidden;
+    border-radius:18px;
+    border:1px solid rgba(203,171,97,.35);
+    box-shadow:0 12px 30px rgba(0,0,0,.10);
+}
+
+.location-photo img{
+    display:block;
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.location-photo img:hover{
+    transform:scale(1.03);
+}
