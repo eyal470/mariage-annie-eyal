@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mariage Annie & Eyal</title>
-  <link rel="stylesheet" href="style.css?v=5.0" />
+  <link rel="stylesheet" href="style.css?v=5.1" />
 </head>
 
 <body>
   <audio id="weddingMusic" src="music.mp3" loop></audio>
 
   <div class="top-logo-bar">
-    <img src="logo.png" alt="Logo Annie et Eyal">
+    <img src="logo.png" alt="Logo Annie et Eyal" />
   </div>
 
   <button id="musicBtn" class="music-player" onclick="toggleMusic()" type="button">
     <span id="musicIcon" class="music-icon">♪</span>
-    <span class="music-copy">
+    <span>
       <strong>Notre chanson</strong>
       <small id="musicText">Écouter</small>
     </span>
@@ -24,8 +24,9 @@
 
   <header class="hero">
     <div class="hero-content">
-      <h1>Annie & Eyal</h1>
-      <p class="date">10 & 13 décembre 2026</p>
+      <h1>Annie &amp; Eyal</h1>
+      <p class="hero-hebrew" dir="rtl">אייל &amp; אנני</p>
+      <p class="date">10 &amp; 13 décembre 2026</p>
       <p class="place">Maisons-Alfort</p>
       <div class="hero-scroll" aria-hidden="true">↓</div>
     </div>
@@ -34,7 +35,6 @@
   <main>
     <section class="intro-section reveal">
       <img class="couple-photo" src="nous.png" alt="Annie et Eyal" />
-
       <h2>Bienvenue</h2>
       <p>C’est avec une immense joie que nous vous accueillons sur le site de notre mariage.</p>
       <p>Vous y trouverez toutes les informations utiles concernant nos deux célébrations, ainsi que le formulaire de confirmation de présence.</p>
@@ -43,7 +43,6 @@
 
     <section class="countdown-section reveal">
       <h2>Nous avons hâte de vous retrouver dans...</h2>
-
       <div class="countdown" aria-label="Compte à rebours">
         <div class="countdown-card"><span id="days">0</span><small>jours</small></div>
         <div class="countdown-card"><span id="hours">0</span><small>heures</small></div>
@@ -56,29 +55,41 @@
       <h2>Les célébrations</h2>
       <p class="section-subtitle">Deux journées, deux moments forts, une même émotion.</p>
 
-      <div class="cards">
-        <article class="event-card">
-          <span class="event-number">01</span>
-          <h3>Mariage civil</h3>
-          <p class="event-date">Jeudi 10 décembre 2026</p>
-          <p><strong>Mairie de Maisons-Alfort</strong></p>
-          <p>À l’issue de la cérémonie, nous nous retrouverons aux Salons du Moulin Brûlé pour partager un cocktail convivial.</p>
+      <div class="invitation-cards">
+        <article class="invitation-card">
+          <div class="invitation-inner">
+            <p class="invite-names">Annie &amp; Eyal</p>
+            <p class="invite-hebrew" dir="rtl">אייל &amp; אנני</p>
+            <div class="ornament">✦</div>
+
+            <h3>Mariage civil &amp; cocktail</h3>
+            <p class="invite-date">Jeudi 10 décembre 2026</p>
+            <p class="invite-place">Mairie de Maisons-Alfort</p>
+            <p class="invite-text">
+              À l’issue de la cérémonie, nous nous retrouverons aux Salons du Moulin Brûlé
+              pour partager un cocktail convivial.
+            </p>
+          </div>
         </article>
 
-        <article class="event-card">
-          <span class="event-number">02</span>
-          <h3>Mariage religieux</h3>
-          <p class="event-date">Dimanche 13 décembre 2026</p>
-          <p><strong>Salons du Moulin Brûlé – Salle Belle Image</strong></p>
+        <article class="invitation-card">
+          <div class="invitation-inner">
+            <p class="invite-names">Annie &amp; Eyal</p>
+            <p class="invite-hebrew" dir="rtl">אייל &amp; אנני</p>
+            <div class="ornament">✦</div>
 
-          <ul class="timeline">
-            <li><span>17h00</span>Accueil des invités</li>
-            <li><span>17h30</span>Houppa</li>
-            <li><span>18h30</span>Cocktail</li>
-            <li><span>20h00</span>Dîner</li>
-            <li><span>22h00</span>Soirée dansante</li>
-            <li><span>02h00</span>Fin des festivités</li>
-          </ul>
+            <h3>Houppa &amp; réception</h3>
+            <p class="invite-date">Dimanche 13 décembre 2026</p>
+            <p class="invite-place">Salons du Moulin Brûlé – Salle Belle Image</p>
+            <ul class="timeline invitation-timeline">
+              <li><span>17h00</span>Accueil des invités</li>
+              <li><span>17h30</span>Houppa</li>
+              <li><span>18h30</span>Cocktail</li>
+              <li><span>20h00</span>Dîner</li>
+              <li><span>22h00</span>Soirée dansante</li>
+              <li><span>02h00</span>Fin des festivités</li>
+            </ul>
+          </div>
         </article>
       </div>
     </section>
@@ -90,13 +101,19 @@
         <div class="info-box">
           <h3>Mairie de Maisons-Alfort</h3>
           <p>Mariage civil – jeudi 10 décembre 2026</p>
-          <a class="map-button" href="https://maps.app.goo.gl/G6zufnzUPKHQJ4Wr9" target="_blank" rel="noopener">Ouvrir dans Google Maps</a>
+          <div class="map-actions">
+            <a class="map-button" href="https://www.google.com/maps/dir/?api=1&destination=Mairie%20de%20Maisons-Alfort" target="_blank" rel="noopener">Itinéraire Google Maps</a>
+            <a class="waze-button" href="https://waze.com/ul?q=Mairie%20de%20Maisons-Alfort&navigate=yes" target="_blank" rel="noopener">Ouvrir dans Waze</a>
+          </div>
         </div>
 
         <div class="info-box">
           <h3>Salons du Moulin Brûlé</h3>
           <p>Mariage religieux, cocktail, dîner et soirée.</p>
-          <a class="map-button" href="https://maps.app.goo.gl/hR9wGU7F2wJ36SKQ7" target="_blank" rel="noopener">Ouvrir dans Google Maps</a>
+          <div class="map-actions">
+            <a class="map-button" href="https://www.google.com/maps/dir/?api=1&destination=Salons%20du%20Moulin%20Br%C3%BBl%C3%A9%20Maisons-Alfort" target="_blank" rel="noopener">Itinéraire Google Maps</a>
+            <a class="waze-button" href="https://waze.com/ul?q=Salons%20du%20Moulin%20Br%C3%BBl%C3%A9%20Maisons-Alfort&navigate=yes" target="_blank" rel="noopener">Ouvrir dans Waze</a>
+          </div>
         </div>
       </div>
 
@@ -114,13 +131,12 @@
           <p>Merci de nous répondre avant le <strong>15 octobre 2026</strong>.</p>
         </div>
 
-        <form
-          class="premium-rsvp"
+        <form class="premium-rsvp"
           action="https://script.google.com/macros/s/AKfycbwGCqW6mqo_G4SD4EnlC6eAWY_SbiVunRXSMvp6ylOnwmyRjk0ujJ-hKHcPNoDShLSvig/exec"
           method="POST"
           target="hidden_iframe"
-          onsubmit="return handleRsvpSubmit();"
-        >
+          onsubmit="return handleRsvpSubmit();">
+
           <div class="field-block">
             <label for="guestName">Nom et prénom *</label>
             <input id="guestName" type="text" name="nom" autocomplete="name" placeholder="Votre nom complet" required />
@@ -129,28 +145,56 @@
           <div class="rsvp-event-card">
             <div class="rsvp-event-text">
               <span class="event-tag">Jeudi 10 décembre</span>
-              <h3>Mariage civil & cocktail</h3>
+              <h3>Mariage civil &amp; cocktail</h3>
               <p>Mairie de Maisons-Alfort, puis cocktail aux Salons du Moulin Brûlé.</p>
             </div>
 
-            <div class="stepper" aria-label="Nombre de personnes au mariage civil et cocktail">
-              <button type="button" onclick="changeCount('nbCivil', -1)">−</button>
-              <input id="nbCivil" type="number" name="nbCivil" min="0" value="0" readonly required />
-              <button type="button" onclick="changeCount('nbCivil', 1)">+</button>
+            <div class="choice-row">
+              <label class="choice-pill">
+                <input type="radio" name="civilResponse" value="Oui" onchange="toggleEventCount('civil', true)" />
+                <span>Oui</span>
+              </label>
+              <label class="choice-pill">
+                <input type="radio" name="civilResponse" value="Non" onchange="toggleEventCount('civil', false)" />
+                <span>Non, avec regrets</span>
+              </label>
+            </div>
+
+            <div id="civilCount" class="count-panel">
+              <p>Nombre de personnes</p>
+              <div class="stepper">
+                <button type="button" onclick="changeCount('nbCivil', -1)">−</button>
+                <input id="nbCivil" type="number" name="nbCivil" min="0" value="0" readonly required />
+                <button type="button" onclick="changeCount('nbCivil', 1)">+</button>
+              </div>
             </div>
           </div>
 
           <div class="rsvp-event-card">
             <div class="rsvp-event-text">
               <span class="event-tag">Dimanche 13 décembre</span>
-              <h3>Mariage religieux & réception</h3>
+              <h3>Houppa &amp; réception</h3>
               <p>Houppa, cocktail, dîner et soirée aux Salons du Moulin Brûlé.</p>
             </div>
 
-            <div class="stepper" aria-label="Nombre de personnes au mariage religieux et réception">
-              <button type="button" onclick="changeCount('nbReligieux', -1)">−</button>
-              <input id="nbReligieux" type="number" name="nbReligieux" min="0" value="0" readonly required />
-              <button type="button" onclick="changeCount('nbReligieux', 1)">+</button>
+            <div class="choice-row">
+              <label class="choice-pill">
+                <input type="radio" name="religieuxResponse" value="Oui" onchange="toggleEventCount('religieux', true)" />
+                <span>Oui</span>
+              </label>
+              <label class="choice-pill">
+                <input type="radio" name="religieuxResponse" value="Non" onchange="toggleEventCount('religieux', false)" />
+                <span>Non, avec regrets</span>
+              </label>
+            </div>
+
+            <div id="religieuxCount" class="count-panel">
+              <p>Nombre de personnes</p>
+              <div class="stepper">
+                <button type="button" onclick="changeCount('nbReligieux', -1)">−</button>
+                <input id="nbReligieux" type="number" name="nbReligieux" min="0" value="0" readonly required />
+                <button type="button" onclick="changeCount('nbReligieux', 1)">+</button>
+              </div>
             </div>
           </div>
 
@@ -160,7 +204,6 @@
           </div>
 
           <p id="rsvpError" class="rsvp-error"></p>
-
           <button id="rsvpSubmit" class="rsvp-submit" type="submit">✨ Confirmer ma présence</button>
         </form>
 
@@ -170,12 +213,13 @@
           <div class="thanks-heart">❤️</div>
           <h3>Merci !</h3>
           <p>Votre réponse a bien été enregistrée.</p>
-          <p class="thanks-signature">Annie & Eyal</p>
+          <p class="thanks-signature">Annie &amp; Eyal</p>
+          <p class="thanks-hebrew" dir="rtl">אייל &amp; אנני</p>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="script.js?v=5.0"></script>
+  <script src="script.js?v=5.1"></script>
 </body>
 </html>
