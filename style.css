@@ -41,7 +41,19 @@ section p{font-size:18px;line-height:1.65}
 .countdown-card small{display:block;margin-top:6px;font-size:10px;text-transform:uppercase;color:var(--muted);letter-spacing:.8px}
 .section-subtitle{color:var(--muted);margin-top:-10px}
 
-.invitation-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:42px}
+.invitation-cards{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:50px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.invitation-card{
+    width:100%;
+    max-width:850px;
+}
 .invitation-card{background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,250,238,.95)),radial-gradient(circle at top left,rgba(200,168,107,.18),transparent 32%);border-radius:34px;padding:12px;box-shadow:0 26px 70px rgba(23,32,51,.12);border:1px solid rgba(200,168,107,.35)}
 .invitation-inner{min-height:100%;border:1px solid rgba(200,168,107,.55);border-radius:26px;padding:34px 28px;background:linear-gradient(rgba(255,253,247,.9),rgba(255,253,247,.95)),repeating-linear-gradient(45deg,rgba(200,168,107,.04) 0,rgba(200,168,107,.04) 1px,transparent 1px,transparent 9px)}
 .invite-names{font-family:'Cormorant Garamond',Georgia,serif;font-size:36px;color:var(--night);margin:0;line-height:1.05}
