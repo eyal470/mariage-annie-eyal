@@ -263,3 +263,35 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
   height:170px !important;
   object-fit:cover !important;
 }
+
+.hebrew-blessing-svg{
+  width:100%;
+  max-width:720px;
+  margin:0 auto 18px;
+}
+
+.hebrew-blessing-svg svg{
+  display:block;
+  width:100%;
+  height:auto;
+  overflow:visible;
+}
+
+.blessing-text{
+  font-family:'Noto Serif Hebrew', serif;
+  font-size:36px;
+  font-weight:700;
+  fill:#172033;
+  letter-spacing:1px;
+}
+
+@media(max-width:760px){
+  .hebrew-blessing-svg{
+    max-width:360px;
+    margin-bottom:10px;
+  }
+
+  .blessing-text{
+    font-size:30px;
+  }
+}
