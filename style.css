@@ -109,3 +109,10 @@ section p{font-size:18px;line-height:1.65}
 
 @media(max-width:760px){.top-logo-bar{height:64px}.top-logo-bar img{height:42px}.hero{min-height:78vh;padding:94px 18px 24px}.music-player{top:12px;right:12px;padding:8px 12px}.music-player strong{font-size:12px}.music-player small{font-size:10px}.music-icon{width:30px;height:30px;font-size:18px}section{padding:54px 18px}.invitation-cards,.info-grid{grid-template-columns:1fr}.invitation-inner,.info-box{padding:24px;border-radius:24px}.invite-names{font-size:32px}.invite-hebrew{font-size:22px}.countdown{gap:6px}.countdown-card{width:64px}.countdown-card span{font-size:27px}.rsvp-section{padding:66px 16px}.premium-rsvp{padding:20px;border-radius:26px}.choice-row{flex-direction:column}.choice-pill span{width:100%;text-align:center}.stepper{width:100%;justify-content:space-between}.stepper button{width:42px;height:42px}.stepper input{flex:1}}
 @media(max-width:370px){.countdown-card{width:58px}.countdown-card span{font-size:24px}.countdown-card small{font-size:9px}}
+
+.countdown-logo{
+  display:block;
+  width:190px;
+  max-width:55%;
+  margin:0 auto 22px;
+}
