@@ -201,3 +201,22 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
     min-width:0;
   }
 }
+
+.map-button img,
+.waze-button img{
+  width:22px !important;
+  height:22px !important;
+  max-width:22px !important;
+  max-height:22px !important;
+  object-fit:contain !important;
+  display:inline-block !important;
+  flex-shrink:0 !important;
+}
+
+.map-button,
+.waze-button{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:10px !important;
+}
