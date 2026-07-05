@@ -578,8 +578,7 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
 }
 
 .hero-content{
-  margin-top:auto !important;
-  transform:none !important;
+    transform:translateY(70px);
 }
 
 .hero-ornament{
@@ -624,4 +623,23 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
   .hero-ornament span{
     width:56px;
   }
+}
+
+.ceremony-description{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:2.05rem;
+
+    line-height:1.65;
+
+    font-weight:400;
+
+    color:#1f2437;
+
+    max-width:650px;
+
+    margin:60px auto;
+
+    text-align:center;
 }
