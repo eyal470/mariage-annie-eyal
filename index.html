@@ -149,143 +149,200 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   </div>
 </article>
 
-    <article class="luxury-card">
-      <div class="luxury-card-inner">
+    <article class="luxury-card religious-invitation-card reveal">
+  <div class="luxury-card-inner">
 
-        <div class="card-logo"><img src="logo.png" alt="A&E"></div>
+    <div class="card-logo">
+      <img src="logo.png" alt="A&E">
+    </div>
 
-        <div class="hebrew-blessing-svg" dir="rtl">
-          <svg viewBox="0 0 820 170" role="img">
-            <defs>
-              <path id="blessingCurve" d="M 120 125 Q 410 15 700 125" />
-            </defs>
-            <text class="blessing-text">
-              <textPath href="#blessingCurve" startOffset="50%" text-anchor="middle">
-                קול ששון וקול שמחה קול חתן וקול כלה
-              </textPath>
-            </text>
-          </svg>
-        </div>
+    <div class="hebrew-blessing-svg" dir="rtl">
+      <svg viewBox="0 0 820 170" role="img">
+        <defs>
+          <path id="blessingCurve" d="M 120 125 Q 410 15 700 125" />
+        </defs>
+        <text class="blessing-text">
+          <textPath href="#blessingCurve" startOffset="50%" text-anchor="middle">
+            קול ששון וקול שמחה קול חתן וקול כלה
+          </textPath>
+        </text>
+      </svg>
+    </div>
 
-        <div class="card-symbol star">✡</div>
-        <div class="luxury-separator">✦</div>
+    <div class="card-symbol star">✡</div>
+    <div class="luxury-separator">✦</div>
 
-        <h3>Houppa<br>&amp; réception</h3>
-        <p class="luxury-date">Dimanche 13 décembre 2026</p>
+    <h3 class="invitation-title">Houppa<br>&amp; réception</h3>
 
-        <p class="luxury-place">Salons du Moulin Brûlé –<br>Salle Belle Image</p>
-        <p class="luxury-address">📍 47 Av. Foch<br>94700 Maisons-Alfort</p>
+    <p class="invitation-date">Le dimanche 13 décembre 2026</p>
 
-        <div class="location-photo">
-          <img src="moulin-brule.jpg" alt="Salons du Moulin Brûlé">
-        </div>
+    <p class="invitation-place">
+      Salons du Moulin Brûlé<br>
+      Salle Belle Image
+    </p>
 
-        <ul class="luxury-timeline">
-          <li><strong>17h00</strong><span>Accueil des invités</span></li>
-          <li><strong>17h30</strong><span>Houppa</span></li>
-          <li><strong>18h30</strong><span>Cocktail</span></li>
-          <li><strong>20h00</strong><span>Dîner</span></li>
-          <li><strong>22h00</strong><span>Soirée dansante</span></li>
-          <li><strong>02h00</strong><span>Fin des festivités</span></li>
-        </ul>
+    <p class="invitation-address">
+      📍 47 Av. Foch<br>
+      94700 Maisons-Alfort
+    </p>
 
-        <div class="luxury-separator bottom">✦</div>
+    <div class="location-photo">
+      <img src="moulin-brule.jpg" alt="Salons du Moulin Brûlé">
+    </div>
 
-        <div class="map-actions invite-map-actions">
-          <a class="map-button"
-   href="https://www.google.com/maps/dir/?api=1&destination=47+Av.+Foch,+94700+Maisons-Alfort"
-   target="_blank"
-   rel="noopener">
+    <ul class="luxury-timeline">
+      <li><strong>17h00</strong><span>Accueil des invités</span></li>
+      <li><strong>17h30</strong><span>Houppa</span></li>
+      <li><strong>18h30</strong><span>Cocktail</span></li>
+      <li><strong>20h00</strong><span>Dîner</span></li>
+      <li><strong>22h00</strong><span>Soirée dansante</span></li>
+      <li><strong>02h00</strong><span>Fin des festivités</span></li>
+    </ul>
 
-    <i class="fa-solid fa-dove"></i>
-    <span>Rejoindre la Houppa</span>
+    <div class="luxury-separator bottom">✦</div>
 
-</a>
-          
-          </a>
-        </div>
+    <div class="map-actions invite-map-actions">
+      <a class="map-button"
+         href="https://www.google.com/maps/dir/?api=1&destination=47+Av.+Foch,+94700+Maisons-Alfort"
+         target="_blank"
+         rel="noopener">
+        <i class="fa-solid fa-dove"></i>
+        <span>Rejoindre la Houppa</span>
+      </a>
+    </div>
 
-      </div>
-    </article>
+  </div>
+</article>
 
   </div>
 </section>
 
-    <section id="rsvp" class="rsvp-section">
-      <div class="rsvp-shell reveal">
-        <div class="rsvp-heading">
-          <span class="rsvp-kicker">RSVP</span>
-          <h2>Confirmez votre présence</h2>
-          <p>Merci de nous répondre avant le <strong>15 octobre 2026</strong>.</p>
+    <section id="rsvp" class="rsvp-section reveal">
+
+  <div class="rsvp-shell">
+
+    <div class="rsvp-heading">
+      <span class="rsvp-kicker">Réponse</span>
+      <h2>Confirmez votre présence</h2>
+      <p>
+        Merci de nous répondre avant le <strong>15 octobre 2026</strong>.
+      </p>
+    </div>
+
+    <form class="premium-rsvp"
+          action="https://script.google.com/macros/s/AKfycbwGCqW6mqo_G4SD4EnlC6eAWY_SbiVunRXSMvp6y1OnwmyRjK0ujj-hKHcPNoDShLSvig/exec"
+          method="POST"
+          target="hidden_iframe"
+          onsubmit="return handleRsvpSubmit()">
+
+      <div class="field-block">
+        <label for="guestName">Nom et prénom *</label>
+        <input id="guestName"
+               type="text"
+               name="nom"
+               autocomplete="name"
+               placeholder="Votre nom complet"
+               required>
+      </div>
+
+      <div class="rsvp-event-card" data-event="civil">
+        <div class="rsvp-event-text">
+          <span class="event-tag">Jeudi 10 décembre</span>
+          <h3>Mariage civil &amp; cocktail</h3>
         </div>
 
-        <form class="premium-rsvp" action="https://script.google.com/macros/s/AKfycbwGCqW6mqo_G4SD4EnlC6eAWY_SbiVunRXSMvp6ylOnwmyRjk0ujJ-hKHcPNoDShLSvig/exec" method="POST" target="hidden_iframe" onsubmit="return handleRsvpSubmit();">
-          <div class="field-block">
-            <label for="guestName">Nom et prénom *</label>
-            <input id="guestName" type="text" name="nom" autocomplete="name" placeholder="Votre nom complet" required />
+        <div class="choice-row">
+          <label class="choice-pill">
+            <input type="radio"
+                   name="civilResponse"
+                   value="Oui"
+                   onchange="toggleEventCount('civil', true)">
+            <span>Oui</span>
+          </label>
+
+          <label class="choice-pill">
+            <input type="radio"
+                   name="civilResponse"
+                   value="Non"
+                   onchange="toggleEventCount('civil', false)">
+            <span>Non, avec regrets</span>
+          </label>
+        </div>
+
+        <div id="civilCount" class="count-panel">
+          <p>Nombre de personnes</p>
+          <div class="stepper">
+            <button type="button" onclick="changeCount('nbCivil', -1)">−</button>
+            <input id="nbCivil" type="number" name="nbCivil" min="0" value="0" readonly required>
+            <button type="button" onclick="changeCount('nbCivil', 1)">+</button>
           </div>
-
-          <div class="rsvp-event-card" data-event="civil">
-            <div class="rsvp-event-text">
-              <span class="event-tag">Jeudi 10 décembre</span>
-              <h3>Mariage civil &amp; cocktail</h3>
-            </div>
-            <div class="choice-row">
-              <label class="choice-pill"><input type="radio" name="civilResponse" value="Oui" onchange="toggleEventCount('civil', true)"><span>Oui</span></label>
-              <label class="choice-pill"><input type="radio" name="civilResponse" value="Non" onchange="toggleEventCount('civil', false)"><span>Non, avec regrets</span></label>
-            </div>
-            <div id="civilCount" class="count-panel">
-              <p>Nombre de personnes</p>
-              <div class="stepper">
-                <button type="button" onclick="changeCount('nbCivil', -1)">−</button>
-                <input id="nbCivil" type="number" name="nbCivil" min="0" value="0" readonly required />
-                <button type="button" onclick="changeCount('nbCivil', 1)">+</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="rsvp-event-card" data-event="religieux">
-            <div class="rsvp-event-text">
-              <span class="event-tag">Dimanche 13 décembre</span>
-              <h3>Houppa &amp; réception</h3>
-            </div>
-            <div class="choice-row">
-              <label class="choice-pill"><input type="radio" name="religieuxResponse" value="Oui" onchange="toggleEventCount('religieux', true)"><span>Oui</span></label>
-              <label class="choice-pill"><input type="radio" name="religieuxResponse" value="Non" onchange="toggleEventCount('religieux', false)"><span>Non, avec regrets</span></label>
-            </div>
-            <div id="religieuxCount" class="count-panel">
-              <p>Nombre de personnes</p>
-              <div class="stepper">
-                <button type="button" onclick="changeCount('nbReligieux', -1)">−</button>
-                <input id="nbReligieux" type="number" name="nbReligieux" min="0" value="0" readonly required />
-                <button type="button" onclick="changeCount('nbReligieux', 1)">+</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="field-block">
-            <label for="message">Un petit mot pour les mariés</label>
-            <textarea id="message" name="message" rows="4" placeholder="Votre message..."></textarea>
-          </div>
-
-          <p id="rsvpError" class="rsvp-error"></p>
-          <button id="rsvpSubmit" class="rsvp-submit" type="submit">
-    <i class="fa-solid fa-envelope-open-text"></i>
-    <span>Confirmer ma présence</span>
-</button>
-        </form>
-
-        <iframe name="hidden_iframe" style="display:none;"></iframe>
-
-        <div id="rsvpThanks" class="rsvp-thanks">
-          <div class="thanks-heart">❤️</div>
-          <h3>Merci !</h3>
-          <p>Votre réponse a bien été enregistrée.</p>
-          <p class="thanks-signature">Annie &amp; Eyal</p>
-          <p class="thanks-hebrew" dir="rtl">אנני &amp; אייל</p>
         </div>
       </div>
-    </section>
+
+      <div class="rsvp-event-card" data-event="religieux">
+        <div class="rsvp-event-text">
+          <span class="event-tag">Dimanche 13 décembre</span>
+          <h3>Houppa &amp; réception</h3>
+        </div>
+
+        <div class="choice-row">
+          <label class="choice-pill">
+            <input type="radio"
+                   name="religieuxResponse"
+                   value="Oui"
+                   onchange="toggleEventCount('religieux', true)">
+            <span>Oui</span>
+          </label>
+
+          <label class="choice-pill">
+            <input type="radio"
+                   name="religieuxResponse"
+                   value="Non"
+                   onchange="toggleEventCount('religieux', false)">
+            <span>Non, avec regrets</span>
+          </label>
+        </div>
+
+        <div id="religieuxCount" class="count-panel">
+          <p>Nombre de personnes</p>
+          <div class="stepper">
+            <button type="button" onclick="changeCount('nbReligieux', -1)">−</button>
+            <input id="nbReligieux" type="number" name="nbReligieux" min="0" value="0" readonly required>
+            <button type="button" onclick="changeCount('nbReligieux', 1)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <label for="message">Un petit mot pour les mariés</label>
+        <textarea id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Votre message..."></textarea>
+      </div>
+
+      <p id="rsvpError" class="rsvp-error"></p>
+
+      <button id="rsvpSubmit" class="rsvp-submit" type="submit">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        <span>Confirmer ma présence</span>
+      </button>
+
+    </form>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <div id="rsvpThanks" class="rsvp-thanks">
+      <div class="thanks-heart">❤</div>
+      <h3>Merci !</h3>
+      <p>Votre réponse a bien été enregistrée.</p>
+      <p class="thanks-signature">Annie &amp; Eyal</p>
+      <p class="thanks-hebrew" dir="rtl">אנני &amp; אייל</p>
+    </div>
+
+  </div>
+
+</section>
   </main>
 
   <script src="script.js?v=6.0"></script>
