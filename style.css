@@ -1016,3 +1016,30 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
   12%{ left:130%; }
   100%{ left:130%; }
 }
+
+.luxury-card{
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+.luxury-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:34px;
+  pointer-events:none;
+  border:1px solid rgba(228,207,155,.25);
+  animation:goldBorderGlow 6s ease-in-out infinite;
+}
+
+@keyframes goldBorderGlow{
+  0%,100%{
+    box-shadow:0 0 0 rgba(228,207,155,0);
+    opacity:.45;
+  }
+
+  50%{
+    box-shadow:0 0 22px rgba(228,207,155,.42);
+    opacity:1;
+  }
+}
