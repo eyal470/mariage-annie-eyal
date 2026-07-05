@@ -665,7 +665,7 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
   }
 
   .hero-content{
-    transform:translateY(95px) !important;
+    transform: translateY(135px) !important;
   }
 }
 
