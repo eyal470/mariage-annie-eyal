@@ -807,3 +807,65 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
     padding-top:58px !important;
   }
 }
+
+/* Compte à rebours premium intégré au Hero */
+
+.hero-countdown{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:24px;
+}
+
+.hero-countdown-card{
+  width:74px;
+  padding:11px 6px;
+  border-radius:18px;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(228,207,155,.75);
+  backdrop-filter:blur(10px);
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
+
+.hero-countdown-card span{
+  display:block;
+  font-size:30px;
+  font-weight:800;
+  color:#fff;
+  line-height:1;
+}
+
+.hero-countdown-card small{
+  display:block;
+  margin-top:6px;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:#e4cf9b;
+}
+
+/* on désactive l’ancien compteur si jamais il reste dans le HTML */
+.countdown-section{
+  display:none !important;
+}
+
+@media(max-width:760px){
+  .hero-countdown{
+    gap:7px;
+    margin-top:22px;
+  }
+
+  .hero-countdown-card{
+    width:66px;
+    padding:10px 4px;
+    border-radius:16px;
+  }
+
+  .hero-countdown-card span{
+    font-size:27px;
+  }
+
+  .hero-countdown-card small{
+    font-size:9px;
+  }
+}
