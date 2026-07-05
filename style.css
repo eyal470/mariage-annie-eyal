@@ -748,3 +748,31 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
     transform:translateY(80px) !important;
   }
 }
+
+/* ===========================================
+   HERO FINAL - VERSION DEFINITIVE
+   =========================================== */
+
+/* Desktop */
+.hero{
+    min-height:90vh !important;
+    padding-bottom:55px !important;
+}
+
+.hero-content{
+    transform:translateY(75px) !important;
+}
+
+/* Mobile */
+@media (max-width:760px){
+
+    .hero{
+        min-height:82vh !important;
+        padding-bottom:50px !important;
+    }
+
+    .hero-content{
+        transform:translateY(110px) !important;
+    }
+
+}
