@@ -2515,3 +2515,82 @@ body::after{
 }
 
 }
+
+/* ==========================================================
+   ALIGNEMENT TYPO CARTON MAIRIE -> HOUPPA + RSVP
+========================================================== */
+
+/* Titres principaux comme le carton Mairie */
+.religious-invitation-card .invitation-title,
+.rsvp-heading h2,
+.rsvp-event-text h3{
+  font-family:"Cormorant Garamond", Georgia, serif !important;
+  color:#172033 !important;
+  font-weight:600 !important;
+  line-height:.95 !important;
+  letter-spacing:0 !important;
+  text-transform:none !important;
+}
+
+.religious-invitation-card .invitation-title{
+  font-size:clamp(54px,10vw,72px) !important;
+}
+
+.rsvp-heading h2{
+  font-size:clamp(48px,9vw,66px) !important;
+}
+
+.rsvp-event-text h3{
+  font-size:clamp(38px,7vw,52px) !important;
+}
+
+/* Dates comme le 1er carton */
+.religious-invitation-card .invitation-date,
+.rsvp-kicker,
+.event-tag{
+  font-family:"Cormorant Garamond", Georgia, serif !important;
+  color:#172033 !important;
+  background:none !important;
+  padding:0 !important;
+  border-radius:0 !important;
+  letter-spacing:0 !important;
+  text-transform:none !important;
+  font-size:clamp(25px,5vw,32px) !important;
+  font-weight:500 !important;
+}
+
+/* Lieux et adresses comme le 1er carton */
+.religious-invitation-card .invitation-place,
+.religious-invitation-card .invitation-address,
+.rsvp-heading p,
+.field-block label,
+.count-panel p{
+  font-family:"Cormorant Garamond", Georgia, serif !important;
+  color:#172033 !important;
+  font-size:clamp(24px,5vw,32px) !important;
+  font-weight:500 !important;
+  line-height:1.35 !important;
+}
+
+/* Boutons Oui / Non plus cohérents */
+.choice-pill span{
+  font-family:"Cormorant Garamond", Georgia, serif !important;
+  color:#172033 !important;
+  font-size:26px !important;
+  font-weight:600 !important;
+}
+
+/* Texte message + champs */
+.field-block input,
+.field-block textarea{
+  font-family:"Cormorant Garamond", Georgia, serif !important;
+  color:#172033 !important;
+  font-size:24px !important;
+}
+
+/* Bouton RSVP */
+.rsvp-submit{
+  font-family:"Inter", sans-serif !important;
+  font-size:18px !important;
+  font-weight:800 !important;
+}
