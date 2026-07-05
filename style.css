@@ -1776,3 +1776,76 @@ body::after{
 
     mix-blend-mode:soft-light;
 }
+
+/* ==========================================
+   LOGO A&E PREMIUM
+   ========================================== */
+
+.top-logo-bar img,
+.card-logo img,
+.countdown-logo,
+.site-logo img{
+    animation:logoFloat 6s ease-in-out infinite;
+    filter:
+        drop-shadow(0 3px 8px rgba(23,32,51,.10))
+        drop-shadow(0 0 10px rgba(214,181,109,.16));
+}
+
+@keyframes logoFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-3px);
+    }
+}
+
+/* halo doré subtil */
+.top-logo-bar,
+.card-logo,
+.site-logo{
+    position:relative;
+}
+
+.top-logo-bar::after,
+.card-logo::after,
+.site-logo::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:76px;
+    height:76px;
+    transform:translate(-50%,-50%);
+    background:radial-gradient(circle, rgba(214,181,109,.16), transparent 70%);
+    filter:blur(10px);
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* reflet très discret sur le logo */
+.top-logo-bar img,
+.card-logo img,
+.site-logo img{
+    transition:.35s ease;
+}
+
+@media(hover:hover){
+    .top-logo-bar img:hover,
+    .card-logo img:hover,
+    .site-logo img:hover{
+        transform:scale(1.05) rotate(-2deg);
+    }
+}
+
+/* petit soulignement doré élégant */
+.card-logo::before,
+.site-logo::before{
+    content:"";
+    display:block;
+    width:46px;
+    height:1px;
+    background:#d6b56d;
+    opacity:.45;
+    margin:0 auto 8px;
+}
