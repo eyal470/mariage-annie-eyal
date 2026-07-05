@@ -2046,3 +2046,472 @@ body::after{
     border-radius:24px !important;
   }
 }
+
+/* ==========================================================
+   RSVP PREMIUM
+========================================================== */
+
+.rsvp-section{
+    padding:90px 20px;
+}
+
+.rsvp-shell{
+
+    max-width:900px;
+    margin:auto;
+
+    background:
+        url("pap.png"),
+        linear-gradient(#fffdfa,#fdf8ef);
+
+    background-size:420px,cover;
+
+    border:1px solid rgba(214,181,109,.45);
+
+    border-radius:36px;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.08),
+        0 2px 10px rgba(214,181,109,.15);
+
+    padding:55px;
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+/* effet papier */
+
+.rsvp-shell::before{
+
+    content:"";
+
+    position:absolute;
+    inset:18px;
+
+    border:1px solid rgba(214,181,109,.25);
+
+    border-radius:28px;
+
+    pointer-events:none;
+
+}
+
+
+/* ==========================================================
+   TITRES
+========================================================== */
+
+.rsvp-heading{
+
+    text-align:center;
+    margin-bottom:45px;
+
+}
+
+.rsvp-kicker{
+
+    display:inline-block;
+
+    color:#c8a86b;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:14px;
+
+}
+
+.rsvp-heading h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(44px,5vw,62px);
+
+    color:#172033;
+
+    margin-bottom:15px;
+
+}
+
+.rsvp-heading p{
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+
+/* ==========================================================
+   CHAMPS
+========================================================== */
+
+.field-block{
+
+    margin-bottom:28px;
+
+}
+
+.field-block label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#172033;
+
+    font-weight:600;
+
+}
+
+.field-block input,
+.field-block textarea{
+
+    width:100%;
+
+    border:1px solid rgba(214,181,109,.45);
+
+    border-radius:16px;
+
+    padding:16px 18px;
+
+    background:rgba(255,255,255,.82);
+
+    font-size:16px;
+
+    transition:.25s;
+
+}
+
+.field-block input:focus,
+.field-block textarea:focus{
+
+    outline:none;
+
+    border-color:#c8a86b;
+
+    box-shadow:0 0 0 4px rgba(214,181,109,.18);
+
+}
+
+
+/* ==========================================================
+   CARTES RSVP
+========================================================== */
+
+.rsvp-event-card{
+
+    background:
+        url("pap.png"),
+        linear-gradient(#fffdfa,#fdf8ef);
+
+    background-size:300px,cover;
+
+    border:1px solid rgba(214,181,109,.45);
+
+    border-radius:24px;
+
+    padding:28px;
+
+    margin-bottom:28px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.event-tag{
+
+    display:inline-block;
+
+    background:#efe4c4;
+
+    color:#8a6724;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.rsvp-event-text h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:#172033;
+
+    font-size:34px;
+
+    margin-bottom:12px;
+
+}
+
+
+/* ==========================================================
+   OUI / NON
+========================================================== */
+
+.choice-row{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:22px;
+
+    flex-wrap:wrap;
+
+}
+
+.choice-pill{
+
+    flex:1;
+
+    cursor:pointer;
+
+}
+
+.choice-pill span{
+
+    display:block;
+
+    padding:14px;
+
+    border-radius:999px;
+
+    text-align:center;
+
+    background:white;
+
+    border:1px solid rgba(214,181,109,.4);
+
+    transition:.25s;
+
+    font-weight:600;
+
+}
+
+.choice-pill input{
+
+    display:none;
+
+}
+
+.choice-pill input:checked+span{
+
+    background:#d6b56d;
+
+    color:#172033;
+
+    border-color:#c8a86b;
+
+    box-shadow:
+        0 10px 20px rgba(214,181,109,.28);
+
+}
+
+
+/* ==========================================================
+   STEPPER
+========================================================== */
+
+.stepper{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:18px;
+
+}
+
+.stepper button{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:#d6b56d;
+
+    color:#172033;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.stepper button:hover{
+
+    transform:scale(1.08);
+
+}
+
+.stepper input{
+
+    width:70px;
+
+    text-align:center;
+
+    font-weight:700;
+
+    border:1px solid rgba(214,181,109,.4);
+
+    border-radius:14px;
+
+    padding:10px;
+
+}
+
+
+/* ==========================================================
+   BOUTON ENVOI
+========================================================== */
+
+.rsvp-submit{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-top:35px;
+
+    padding:18px 28px;
+
+    background:linear-gradient(180deg,#EFD18B,#D6B56D);
+
+    color:#172033;
+
+    border:none;
+
+    border-radius:999px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 18px 36px rgba(214,181,109,.30);
+
+    transition:.25s;
+
+}
+
+.rsvp-submit:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 24px 46px rgba(214,181,109,.38);
+
+}
+
+.rsvp-submit i{
+
+    font-size:22px;
+
+}
+
+
+/* ==========================================================
+   MERCI
+========================================================== */
+
+.rsvp-thanks{
+
+    text-align:center;
+
+    padding:70px 20px;
+
+}
+
+.rsvp-thanks h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:48px;
+
+    color:#172033;
+
+}
+
+.rsvp-thanks p{
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:760px){
+
+.rsvp-shell{
+
+    padding:34px 22px;
+
+}
+
+.rsvp-heading h2{
+
+    font-size:42px;
+
+}
+
+.rsvp-event-text h3{
+
+    font-size:28px;
+
+}
+
+.choice-row{
+
+    flex-direction:column;
+
+}
+
+.rsvp-submit{
+
+    font-size:17px;
+
+    padding:17px;
+
+}
+
+}
