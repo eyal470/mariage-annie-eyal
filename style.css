@@ -245,8 +245,7 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
     padding:18px 28px;
 
     background:linear-gradient(180deg,#E2CCA0 0%,#D6B56D 100%);
-    color:#172033;
-
+  
     border:1px solid #C7A861;
     border-radius:999px;
 
@@ -283,7 +282,7 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
 .map-button:hover{
     transform:translateY(-2px);
 
-    background:linear-gradient(180deg,#E9D6AE 0%,#DEBF7A 100%);
+    background:linear-gradient(180deg,#EDE1C7 0%,#DABD83 100%);
 
     border-color:#D0AE67;
 
