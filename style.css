@@ -946,5 +946,18 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
     box-shadow:0 12px 28px rgba(214,181,109,.35);
 }
 
+.map-actions .map-button{
+  background:linear-gradient(180deg,#E2CCA0 0%,#D6B56D 100%) !important;
+  color:#172033 !important;
+  border:1px solid #C7A861 !important;
+}
 
+.map-actions .map-button i{
+  color:#172033 !important;
+}
+
+.map-actions .map-button:hover{
+  background:linear-gradient(180deg,#E9D6AE 0%,#DEBF7A 100%) !important;
+  color:#172033 !important;
+}
 
