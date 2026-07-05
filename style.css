@@ -521,3 +521,28 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
 .civil-buttons{
   margin-top:32px;
 }
+
+.civil-small{
+  display:none !important;
+}
+
+.civil-card-inner .luxury-time-block{
+  margin-top:18px !important;
+  margin-bottom:34px !important;
+}
+
+.civil-card-inner .luxury-text{
+  margin-top:20px !important;
+  font-size:27px !important;
+  line-height:1.55 !important;
+}
+
+.civil-card-inner .map-button span{
+  white-space:nowrap;
+}
+
+@media(max-width:760px){
+  .civil-card-inner .luxury-text{
+    font-size:24px !important;
+  }
+}
