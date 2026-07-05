@@ -1951,3 +1951,98 @@ body::after{
   }
 }
 
+/* ==========================================
+   UNIFICATION THEME CARTON MAIRIE
+   Houp­pa + RSVP
+   ========================================== */
+
+/* Même style papier luxe pour le 2e carton */
+.luxury-card,
+.rsvp-form,
+.premium-rsvp{
+  background:
+    linear-gradient(rgba(255,253,247,.88),rgba(255,253,247,.88)),
+    url("pap.png") center/700px auto repeat !important;
+
+  border:1px solid rgba(214,181,109,.55) !important;
+  border-radius:34px !important;
+
+  box-shadow:
+    0 22px 50px rgba(23,32,51,.08),
+    0 4px 12px rgba(23,32,51,.04),
+    inset 0 1px 0 rgba(255,255,255,.75),
+    inset 0 -1px 0 rgba(200,168,107,.10) !important;
+}
+
+/* Intérieur identique au carton mairie */
+.luxury-card-inner,
+.rsvp-form-inner{
+  background:rgba(255,253,247,.72) !important;
+  border:1px solid rgba(214,181,109,.32) !important;
+  border-radius:28px !important;
+}
+
+/* RSVP : supprimer l’effet trop sombre si présent */
+.rsvp-section{
+  background:
+    linear-gradient(rgba(23,32,51,.88),rgba(23,32,51,.88)),
+    url("pap.png") center/800px auto repeat !important;
+}
+
+/* Cartes de choix RSVP en style ivoire */
+.rsvp-event-card,
+.event-choice,
+.rsvp-card{
+  background:
+    linear-gradient(rgba(255,253,247,.90),rgba(255,253,247,.90)),
+    url("pap.png") center/650px auto repeat !important;
+
+  border:1px solid rgba(214,181,109,.35) !important;
+  border-radius:26px !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.65),
+    0 10px 26px rgba(23,32,51,.05) !important;
+}
+
+/* Titres RSVP harmonisés */
+.rsvp-section h2,
+.rsvp-form h3,
+.premium-rsvp h3{
+  font-family:'Cormorant Garamond', Georgia, serif !important;
+  color:#172033 !important;
+}
+
+/* Labels et textes RSVP */
+.rsvp-form label,
+.premium-rsvp label,
+.rsvp-form p,
+.premium-rsvp p{
+  color:#172033 !important;
+}
+
+/* Bouton principal RSVP en doré champagne */
+#rsvpSubmit,
+.rsvp-submit{
+  background:linear-gradient(180deg,#E7D8B5 0%,#D5B87A 100%) !important;
+  color:#172033 !important;
+  border:1px solid #C7A861 !important;
+  border-radius:999px !important;
+  box-shadow:
+    0 12px 28px rgba(199,168,97,.32),
+    inset 0 1px 0 rgba(255,255,255,.55) !important;
+}
+
+/* Mobile */
+@media(max-width:760px){
+  .luxury-card,
+  .rsvp-form,
+  .premium-rsvp{
+    border-radius:30px !important;
+  }
+
+  .luxury-card-inner,
+  .rsvp-form-inner{
+    border-radius:24px !important;
+  }
+}
