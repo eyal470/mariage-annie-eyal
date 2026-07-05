@@ -547,3 +547,23 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
   }
 }
 
+.civil-description{
+    font-family:'Cormorant Garamond', serif;
+    font-size:34px;
+    font-weight:500;
+    line-height:1.45;
+    color:#172033;
+    text-align:center;
+    max-width:78%;
+    margin:42px auto;
+}
+
+@media (max-width:760px){
+
+.civil-description{
+    font-size:26px;
+    line-height:1.5;
+    max-width:84%;
+}
+
+}
