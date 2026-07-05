@@ -1043,3 +1043,30 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
     opacity:1;
   }
 }
+
+/* ==========================================
+   Texture papier ivoire premium
+   ========================================== */
+
+body{
+    background-color:#fbfaf7 !important;
+
+    background-image:
+        radial-gradient(rgba(200,168,107,.035) 0.6px, transparent 0.6px),
+        radial-gradient(rgba(23,32,51,.02) 0.5px, transparent 0.5px),
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.35),
+            rgba(250,247,240,.35)
+        );
+
+    background-size:
+        14px 14px,
+        22px 22px,
+        100% 100%;
+
+    background-position:
+        0 0,
+        8px 8px,
+        0 0;
+}
