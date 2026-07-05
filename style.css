@@ -776,3 +776,34 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
     }
 
 }
+
+
+/* HERO - laisser apparaître Maisons-Alfort */
+.hero{
+  min-height:94vh !important;
+  padding-bottom:95px !important;
+}
+
+.hero-content{
+  transform:translateY(60px) !important;
+}
+
+.countdown-section{
+  padding-top:55px !important;
+  margin-top:0 !important;
+}
+
+@media(max-width:760px){
+  .hero{
+    min-height:88vh !important;
+    padding-bottom:105px !important;
+  }
+
+  .hero-content{
+    transform:translateY(75px) !important;
+  }
+
+  .countdown-section{
+    padding-top:58px !important;
+  }
+}
