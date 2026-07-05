@@ -1761,3 +1761,18 @@ body {
         8px 8px,
         0 0;
 }
+
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:9999;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.18), transparent 35%),
+        radial-gradient(circle at 80% 70%, rgba(214,181,109,.04), transparent 40%);
+
+    mix-blend-mode:soft-light;
+}
