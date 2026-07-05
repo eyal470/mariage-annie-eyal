@@ -643,3 +643,59 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
 
     text-align:center;
 }
+
+/* CORRECTIONS FINALES HERO + ESPACES + TEXTE CIVIL */
+
+.hero{
+  min-height:82vh !important;
+  align-items:flex-end !important;
+  padding-top:96px !important;
+  padding-bottom:35px !important;
+}
+
+.hero-content{
+  transform:translateY(85px) !important;
+  margin-bottom:0 !important;
+}
+
+@media(max-width:760px){
+  .hero{
+    min-height:78vh !important;
+    padding-bottom:28px !important;
+  }
+
+  .hero-content{
+    transform:translateY(95px) !important;
+  }
+}
+
+/* Réduit les grands espaces après la photo */
+.countdown-section{
+  padding:26px 18px 28px !important;
+}
+
+.celebrations-section{
+  padding-top:28px !important;
+}
+
+/* Texte civil plus cohérent */
+.ceremony-description,
+.civil-description{
+  font-family:'Cormorant Garamond', Georgia, serif !important;
+  font-size:24px !important;
+  line-height:1.55 !important;
+  font-weight:500 !important;
+  color:#172033 !important;
+  max-width:82% !important;
+  margin:34px auto 38px !important;
+  text-align:center !important;
+}
+
+@media(max-width:760px){
+  .ceremony-description,
+  .civil-description{
+    font-size:23px !important;
+    line-height:1.55 !important;
+    max-width:86% !important;
+  }
+}
