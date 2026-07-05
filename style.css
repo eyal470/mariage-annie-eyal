@@ -457,3 +457,67 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
   }
 }
 
+.civil-card-inner{
+  background:
+    linear-gradient(rgba(255,255,255,.82), rgba(255,255,255,.9)),
+    radial-gradient(circle at center, rgba(200,168,107,.08), transparent 65%);
+  text-align:center;
+}
+
+.civil-title{
+  font-size:34px!important;
+  letter-spacing:2px;
+  margin:10px 0 26px!important;
+}
+
+.civil-bouquet{
+  font-size:54px;
+  color:var(--night);
+  margin-bottom:20px;
+}
+
+.civil-small{
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px!important;
+  margin:0 0 8px!important;
+}
+
+.civil-names{
+  font-family:'Cormorant Garamond',serif;
+  font-size:34px!important;
+  font-style:italic;
+  color:var(--night);
+  margin:0 0 8px!important;
+}
+
+.civil-text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:25px!important;
+  line-height:1.4!important;
+  margin:0 0 20px!important;
+}
+
+.civil-text span{
+  font-style:italic;
+  font-size:30px;
+}
+
+.civil-date,
+.civil-time,
+.civil-place,
+.civil-address,
+.civil-note{
+  font-family:'Cormorant Garamond',serif;
+  color:var(--night);
+  font-size:21px!important;
+  line-height:1.55!important;
+  margin:12px 0!important;
+}
+
+.civil-note{
+  margin-top:28px!important;
+}
+
+.civil-buttons{
+  margin-top:32px;
+}
