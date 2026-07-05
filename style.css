@@ -987,3 +987,32 @@ section{max-width:1060px;margin:0 auto;padding:70px 22px;text-align:center}secti
     position:relative;
     z-index:2;
 }
+
+.map-button{
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+.map-button::after{
+  content:"";
+  position:absolute;
+  top:-40%;
+  left:-80%;
+  width:45%;
+  height:180%;
+  background:linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,.55) 50%,
+    transparent 100%
+  );
+  transform:rotate(18deg);
+  animation:buttonShine 7s ease-in-out infinite;
+  pointer-events:none;
+}
+
+@keyframes buttonShine{
+  0%{ left:-80%; }
+  12%{ left:130%; }
+  100%{ left:130%; }
+}
