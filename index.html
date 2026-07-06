@@ -6,7 +6,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mariage Annie & Eyal</title>
-  <link rel="stylesheet" href="style.css?v=6.0" />
+  <link rel="stylesheet" href="style.css?v=7.0" />
 </head>
 <body>
   <audio id="weddingMusic" src="music.mp3" loop></audio>
@@ -217,23 +217,21 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   </div>
 </section>
 
-    <section id="rsvp" class="rsvp-section reveal">
+    <section id="rsvp" class="rsvp-section-premium reveal">
 
-  <div class="rsvp-shell">
+  <div class="rsvp-premium-shell">
 
-    <div class="rsvp-heading">
-      <span class="rsvp-kicker">Réponse</span>
+    <div class="rsvp-premium-heading">
+      <span class="rsvp-kicker">RSVP</span>
       <h2>Confirmez votre présence</h2>
-      <p>
-        Merci de nous répondre avant le <strong>15 octobre 2026</strong>.
-      </p>
+      <p>Merci de nous répondre avant le <strong>15 octobre 2026</strong>.</p>
     </div>
 
     <form class="premium-rsvp"
           action="https://script.google.com/macros/s/AKfycbwGCqW6mqo_G4SD4EnlC6eAWY_SbiVunRXSMvp6y1OnwmyRjK0ujj-hKHcPNoDShLSvig/exec"
           method="POST"
           target="hidden_iframe"
-          onsubmit="return handleRsvpSubmit()">
+          onsubmit="return handleRsvpSubmit();">
 
       <div class="field-block">
         <label for="guestName">Nom et prénom *</label>
@@ -246,10 +244,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       </div>
 
       <div class="rsvp-event-card" data-event="civil">
-        <div class="rsvp-event-text">
-          <span class="event-tag">Jeudi 10 décembre</span>
-          <h3>Mariage civil &amp; cocktail</h3>
-        </div>
+        <span class="event-tag">Jeudi 10 décembre</span>
+        <h3>Mariage civil &amp; cocktail</h3>
 
         <div class="choice-row">
           <label class="choice-pill">
@@ -280,10 +276,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       </div>
 
       <div class="rsvp-event-card" data-event="religieux">
-        <div class="rsvp-event-text">
-          <span class="event-tag">Dimanche 13 décembre</span>
-          <h3>Houppa &amp; réception</h3>
-        </div>
+        <span class="event-tag">Dimanche 13 décembre</span>
+        <h3>Houppa &amp; réception</h3>
 
         <div class="choice-row">
           <label class="choice-pill">
@@ -332,7 +326,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
     <iframe name="hidden_iframe" style="display:none;"></iframe>
 
-    <div id="rsvpThanks" class="rsvp-thanks">
+    <div id="rsvpThanks" class="rsvp-thanks-premium">
       <div class="thanks-heart">❤</div>
       <h3>Merci !</h3>
       <p>Votre réponse a bien été enregistrée.</p>
@@ -342,9 +336,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
   </div>
 
+  <div id="confettiLayer"></div>
+
 </section>
   </main>
 
-  <script src="script.js?v=6.0"></script>
+  <script src="script.js?v=7.0"></script>
 </body>
 </html>
