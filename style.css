@@ -2595,124 +2595,454 @@ body::after{
   font-weight:800 !important;
 }
 
-.rsvp-section-premium{
+/* ==========================================================
+   RSVP V8 — premium, sans carton, cohérent avec les faire-part
+========================================================== */
+
+.rsvp-premium-section{
   position:relative;
   overflow:hidden;
-  padding:95px 20px;
+  padding:96px 20px 110px;
   background:
-    radial-gradient(circle at top left, rgba(214,181,109,.20), transparent 35%),
-    linear-gradient(135deg,#101827,#172033 55%,#22304a);
+    radial-gradient(circle at 18% 8%, rgba(214,181,109,.22), transparent 30%),
+    radial-gradient(circle at 90% 78%, rgba(214,181,109,.10), transparent 34%),
+    linear-gradient(135deg,#101827 0%,#172033 55%,#22304a 100%);
 }
 
-.rsvp-premium-shell{
-  max-width:860px;
+.rsvp-premium-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.16;
+  background:
+    linear-gradient(rgba(255,255,255,.08),rgba(255,255,255,.08)),
+    url("pap.png") center/760px auto repeat;
+  mix-blend-mode:soft-light;
+}
+
+.rsvp-premium-wrap{
+  position:relative;
+  z-index:2;
+  max-width:820px;
   margin:0 auto;
 }
 
-.rsvp-premium-heading{
+.rsvp-intro{
   text-align:center;
-  color:white;
-  margin-bottom:42px;
+  color:#fff;
+  margin:0 auto 34px;
 }
 
-.rsvp-premium-heading h2{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(48px,8vw,72px);
+.rsvp-logo{
+  width:92px;
+  height:auto;
+  display:block;
+  margin:0 auto 22px;
+  opacity:.94;
+  filter:
+    drop-shadow(0 8px 18px rgba(0,0,0,.18))
+    drop-shadow(0 0 14px rgba(214,181,109,.18));
+}
+
+.rsvp-kicker{
+  display:block;
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:clamp(25px,5vw,32px);
+  font-weight:500;
+  color:#d6b56d;
+  letter-spacing:.08em;
+  margin-bottom:8px;
+}
+
+.rsvp-intro h2{
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:clamp(54px,11vw,82px);
   font-weight:600;
-  margin:8px 0 12px;
-  color:white;
+  line-height:.95;
+  color:#fff;
+  margin:0 0 14px;
 }
 
-.rsvp-premium-heading p{
-  color:rgba(255,255,255,.82);
-  font-size:18px;
+.rsvp-intro p{
+  max-width:680px;
+  margin:0 auto;
+  font-family:"Inter",sans-serif;
+  font-size:clamp(18px,4vw,22px);
+  line-height:1.55;
+  color:rgba(255,255,255,.86);
 }
 
-.rsvp-section-premium .premium-rsvp{
-  background:rgba(255,253,247,.96);
-  backdrop-filter:blur(14px);
-  border:1px solid rgba(214,181,109,.55);
-  border-radius:34px;
-  padding:36px;
-  box-shadow:0 32px 80px rgba(0,0,0,.35);
+.rsvp-intro strong{
+  color:#fff;
 }
 
-.rsvp-section-premium .rsvp-event-card{
-  background:#fffdf7;
-  border:1px solid rgba(214,181,109,.38);
-  border-radius:26px;
-  padding:26px;
-  margin:22px 0;
-  box-shadow:0 12px 30px rgba(23,32,51,.06);
+.rsvp-premium-section .premium-rsvp{
+  background:
+    linear-gradient(rgba(255,253,247,.92),rgba(255,253,247,.92)),
+    url("pap.png") center/720px auto repeat !important;
+  border:1px solid rgba(214,181,109,.62) !important;
+  border-radius:36px !important;
+  padding:42px 34px !important;
+  box-shadow:
+    0 34px 90px rgba(0,0,0,.34),
+    0 8px 26px rgba(0,0,0,.12),
+    inset 0 1px 0 rgba(255,255,255,.78) !important;
+  backdrop-filter:blur(8px);
 }
 
-.rsvp-section-premium .rsvp-event-card h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:34px;
+.rsvp-premium-section .field-block{
+  margin-bottom:28px;
+}
+
+.rsvp-premium-section .field-block label,
+.rsvp-premium-section .count-panel p{
+  display:block;
+  margin:0 0 12px;
+  font-family:"Cormorant Garamond", Georgia, serif !important;
+  font-size:clamp(26px,5vw,34px) !important;
+  font-weight:500 !important;
+  color:#172033 !important;
+  line-height:1.15 !important;
+}
+
+.rsvp-premium-section input[type="text"],
+.rsvp-premium-section textarea{
+  width:100%;
+  border:1px solid rgba(214,181,109,.42) !important;
+  border-radius:22px !important;
+  background:rgba(255,255,255,.84) !important;
+  color:#172033 !important;
+  font-family:"Cormorant Garamond", Georgia, serif !important;
+  font-size:clamp(25px,5vw,34px) !important;
+  font-weight:500 !important;
+  padding:18px 22px !important;
+  box-shadow:
+    inset 0 1px 4px rgba(23,32,51,.04),
+    0 10px 24px rgba(23,32,51,.04);
+}
+
+.rsvp-premium-section textarea{
+  min-height:150px;
+  resize:vertical;
+}
+
+.rsvp-premium-section input:focus,
+.rsvp-premium-section textarea:focus{
+  outline:none;
+  border-color:#c8a86b !important;
+  box-shadow:
+    0 0 0 4px rgba(214,181,109,.16),
+    inset 0 1px 4px rgba(23,32,51,.04) !important;
+}
+
+.rsvp-premium-section .rsvp-event-card{
+  position:relative;
+  margin:28px 0;
+  padding:30px 26px;
+  border-radius:30px;
+  background:
+    linear-gradient(rgba(255,253,247,.92),rgba(255,253,247,.92)),
+    url("pap.png") center/620px auto repeat !important;
+  border:1px solid rgba(214,181,109,.42) !important;
+  box-shadow:
+    0 16px 36px rgba(23,32,51,.08),
+    inset 0 1px 0 rgba(255,255,255,.72) !important;
+}
+
+.rsvp-premium-section .rsvp-event-card::before{
+  content:"";
+  position:absolute;
+  inset:14px;
+  border-radius:23px;
+  border:1px solid rgba(214,181,109,.18);
+  pointer-events:none;
+}
+
+.rsvp-event-head,
+.rsvp-event-card > .event-tag,
+.rsvp-event-card > h3{
+  position:relative;
+  z-index:1;
+}
+
+.rsvp-premium-section .event-tag{
+  display:block;
+  margin:0 0 12px;
+  background:none !important;
+  padding:0 !important;
+  border-radius:0 !important;
+  font-family:"Cormorant Garamond", Georgia, serif !important;
+  font-size:clamp(24px,4.6vw,31px) !important;
+  font-weight:500 !important;
+  color:#172033 !important;
+  letter-spacing:0 !important;
+  text-transform:none !important;
+}
+
+.rsvp-premium-section .rsvp-event-card h3{
+  margin:0 0 24px !important;
+  font-family:"Cormorant Garamond", Georgia, serif !important;
+  font-size:clamp(40px,8vw,58px) !important;
+  font-weight:600 !important;
+  line-height:.95 !important;
+  color:#172033 !important;
+  letter-spacing:0 !important;
+}
+
+.rsvp-premium-section .choice-row{
+  position:relative;
+  z-index:1;
+  display:flex;
+  gap:14px;
+  margin-top:20px;
+}
+
+.rsvp-premium-section .choice-pill{
+  flex:1;
+  cursor:pointer;
+}
+
+.rsvp-premium-section .choice-pill input{
+  display:none;
+}
+
+.rsvp-premium-section .choice-pill span{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:58px;
+  padding:14px 18px;
+  border-radius:999px;
+  background:rgba(255,255,255,.78) !important;
+  border:1px solid rgba(214,181,109,.40) !important;
+  color:#172033 !important;
+  font-family:"Cormorant Garamond", Georgia, serif !important;
+  font-size:clamp(26px,5vw,34px) !important;
+  font-weight:600 !important;
+  line-height:1;
+  box-shadow:0 8px 22px rgba(23,32,51,.05);
+  transition:transform .18s ease, background .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.rsvp-premium-section .choice-pill input:checked + span{
+  background:linear-gradient(180deg,#E7D8B5 0%,#D5B87A 100%) !important;
+  border-color:#c7a861 !important;
+  box-shadow:
+    0 14px 26px rgba(199,168,97,.28),
+    inset 0 1px 0 rgba(255,255,255,.55);
+}
+
+.rsvp-premium-section .choice-pill span:active{
+  transform:scale(.98);
+}
+
+.rsvp-premium-section .count-panel{
+  position:relative;
+  z-index:1;
+  display:none;
+  margin-top:22px;
+  text-align:center;
+}
+
+.rsvp-premium-section .count-panel.is-visible{
+  display:block;
+}
+
+.rsvp-premium-section .stepper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:16px;
+}
+
+.rsvp-premium-section .stepper button{
+  width:48px;
+  height:48px;
+  border:none;
+  border-radius:50%;
+  background:linear-gradient(180deg,#E7D8B5 0%,#D5B87A 100%);
   color:#172033;
-  margin:8px 0 18px;
+  font-size:28px;
+  line-height:1;
+  font-weight:700;
+  box-shadow:0 10px 22px rgba(199,168,97,.24);
 }
 
-.rsvp-section-premium .choice-pill span{
-  border:1px solid rgba(214,181,109,.45);
+.rsvp-premium-section .stepper input{
+  width:82px;
+  height:48px;
+  text-align:center;
+  border:1px solid rgba(214,181,109,.38);
+  border-radius:16px;
   background:white;
   color:#172033;
+  font-family:"Inter",sans-serif;
+  font-size:22px;
+  font-weight:800;
 }
 
-.rsvp-section-premium .choice-pill input:checked + span{
-  background:linear-gradient(180deg,#E7D8B5,#D5B87A);
-  color:#172033;
-  border-color:#c7a861;
+.rsvp-error{
+  min-height:24px;
+  text-align:center;
+  color:#9f2d2d !important;
+  font-family:"Inter",sans-serif !important;
+  font-size:15px !important;
+  font-weight:700 !important;
 }
 
-.rsvp-section-premium .rsvp-submit{
-  background:linear-gradient(180deg,#E7D8B5,#D5B87A)!important;
-  color:#172033!important;
-  border:1px solid #c7a861!important;
-  border-radius:999px!important;
-  box-shadow:0 16px 36px rgba(199,168,97,.35)!important;
+.rsvp-premium-section .rsvp-submit{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  margin-top:26px;
+  padding:18px 24px;
+  border-radius:999px !important;
+  border:1px solid #c7a861 !important;
+  background:linear-gradient(180deg,#E7D8B5 0%,#D5B87A 100%) !important;
+  color:#172033 !important;
+  font-family:"Inter",sans-serif !important;
+  font-size:18px !important;
+  font-weight:800 !important;
+  cursor:pointer;
+  box-shadow:
+    0 18px 42px rgba(199,168,97,.34),
+    inset 0 1px 0 rgba(255,255,255,.55) !important;
+  transition:transform .18s ease, box-shadow .24s ease;
+}
+
+.rsvp-premium-section .rsvp-submit i{
+  font-size:21px;
+  color:#172033 !important;
+}
+
+.rsvp-premium-section .rsvp-submit:active{
+  transform:scale(.98);
+}
+
+.rsvp-premium-section .rsvp-submit.is-loading{
+  opacity:.78;
+  pointer-events:none;
 }
 
 .rsvp-thanks-premium{
   display:none;
   text-align:center;
-  background:rgba(255,253,247,.96);
-  border:1px solid rgba(214,181,109,.55);
-  border-radius:34px;
-  padding:58px 28px;
-  box-shadow:0 32px 80px rgba(0,0,0,.35);
-  animation:fadeUp .6s ease both;
+  margin:0 auto;
+  padding:58px 30px;
+  border-radius:36px;
+  background:
+    linear-gradient(rgba(255,253,247,.92),rgba(255,253,247,.92)),
+    url("pap.png") center/700px auto repeat;
+  border:1px solid rgba(214,181,109,.62);
+  box-shadow:
+    0 34px 90px rgba(0,0,0,.34),
+    inset 0 1px 0 rgba(255,255,255,.76);
+}
+
+.thanks-logo{
+  width:92px;
+  display:block;
+  margin:0 auto 18px;
+}
+
+.thanks-heart{
+  color:#d6b56d;
+  font-size:32px;
+  margin-bottom:10px;
 }
 
 .rsvp-thanks-premium h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:56px;
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:clamp(58px,12vw,82px);
+  font-weight:600;
   color:#172033;
-  margin:0 0 10px;
+  margin:0 0 14px;
 }
 
 .rsvp-thanks-premium p{
   color:#172033;
+  font-family:"Inter",sans-serif;
+  font-size:19px;
+  line-height:1.6;
+}
+
+.rsvp-thanks-premium .thanks-signature{
+  margin-top:22px;
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:40px;
+  color:#172033;
+}
+
+.rsvp-thanks-premium .thanks-hebrew{
+  font-family:"Noto Serif Hebrew", serif;
+  color:#c8a86b;
+  font-size:28px;
+  font-weight:700;
 }
 
 #confettiLayer{
   pointer-events:none;
-  position:absolute;
+  position:fixed;
   inset:0;
+  z-index:99999;
   overflow:hidden;
 }
 
 .confetti{
   position:absolute;
-  top:-20px;
-  width:8px;
-  height:14px;
-  background:#d6b56d;
-  opacity:.9;
-  animation:confettiFall 2.4s ease-out forwards;
+  top:-30px;
+  width:9px;
+  height:16px;
+  border-radius:2px;
+  opacity:.95;
+  animation:confettiFall 2.9s cubic-bezier(.16,.84,.44,1) forwards;
+}
+
+.confetti.round{
+  width:9px;
+  height:9px;
+  border-radius:50%;
 }
 
 @keyframes confettiFall{
-  0%{transform:translateY(0) rotate(0deg);opacity:1}
-  100%{transform:translateY(720px) rotate(520deg);opacity:0}
+  0%{
+    transform:translate3d(0,-20px,0) rotate(0deg);
+    opacity:1;
+  }
+  100%{
+    transform:translate3d(var(--x-drift),105vh,0) rotate(var(--spin));
+    opacity:0;
+  }
+}
+
+@media(max-width:760px){
+  .rsvp-premium-section{
+    padding:78px 16px 92px;
+  }
+
+  .rsvp-premium-section .premium-rsvp{
+    padding:32px 20px !important;
+    border-radius:32px !important;
+  }
+
+  .rsvp-premium-section .rsvp-event-card{
+    padding:28px 20px;
+    border-radius:28px;
+  }
+
+  .rsvp-premium-section .choice-row{
+    flex-direction:column;
+  }
+
+  .rsvp-premium-section .choice-pill span{
+    min-height:58px;
+  }
+
+  .rsvp-premium-section input[type="text"],
+  .rsvp-premium-section textarea{
+    padding:16px 18px !important;
+  }
 }
