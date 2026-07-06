@@ -6,7 +6,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mariage Annie & Eyal</title>
-  <link rel="stylesheet" href="style.css?v=7.0" />
+  <link rel="stylesheet" href="style.css?v=8.0" />
+  <link rel="stylesheet" href="rsvp-v8.css?v=8.0" />
 </head>
 <body>
   <audio id="weddingMusic" src="music.mp3" loop></audio>
@@ -217,14 +218,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   </div>
 </section>
 
-    <section id="rsvp" class="rsvp-section-premium reveal">
+    <section id="rsvp" class="rsvp-premium-section reveal">
 
-  <div class="rsvp-premium-shell">
+  <div class="rsvp-premium-wrap">
 
-    <div class="rsvp-premium-heading">
+    <div class="rsvp-intro">
+      <img class="rsvp-logo" src="logo.png" alt="A&E">
       <span class="rsvp-kicker">RSVP</span>
-      <h2>Confirmez votre présence</h2>
-      <p>Merci de nous répondre avant le <strong>15 octobre 2026</strong>.</p>
+      <h2>Votre réponse</h2>
+      <p>
+        Merci de nous répondre avant le <strong>15 octobre 2026</strong>.
+      </p>
     </div>
 
     <form class="premium-rsvp"
@@ -233,7 +237,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
           target="hidden_iframe"
           onsubmit="return handleRsvpSubmit();">
 
-      <div class="field-block">
+      <div class="field-block rsvp-name-block">
         <label for="guestName">Nom et prénom *</label>
         <input id="guestName"
                type="text"
@@ -244,23 +248,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       </div>
 
       <div class="rsvp-event-card" data-event="civil">
-        <span class="event-tag">Jeudi 10 décembre</span>
-        <h3>Mariage civil &amp; cocktail</h3>
+        <div class="rsvp-event-head">
+          <span class="event-tag">Jeudi 10 décembre</span>
+          <h3>Mariage civil &amp; cocktail</h3>
+        </div>
 
         <div class="choice-row">
           <label class="choice-pill">
-            <input type="radio"
-                   name="civilResponse"
-                   value="Oui"
-                   onchange="toggleEventCount('civil', true)">
+            <input type="radio" name="civilResponse" value="Oui" onchange="toggleEventCount('civil', true)">
             <span>Oui</span>
           </label>
 
           <label class="choice-pill">
-            <input type="radio"
-                   name="civilResponse"
-                   value="Non"
-                   onchange="toggleEventCount('civil', false)">
+            <input type="radio" name="civilResponse" value="Non" onchange="toggleEventCount('civil', false)">
             <span>Non, avec regrets</span>
           </label>
         </div>
@@ -276,23 +276,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       </div>
 
       <div class="rsvp-event-card" data-event="religieux">
-        <span class="event-tag">Dimanche 13 décembre</span>
-        <h3>Houppa &amp; réception</h3>
+        <div class="rsvp-event-head">
+          <span class="event-tag">Dimanche 13 décembre</span>
+          <h3>Houppa &amp; réception</h3>
+        </div>
 
         <div class="choice-row">
           <label class="choice-pill">
-            <input type="radio"
-                   name="religieuxResponse"
-                   value="Oui"
-                   onchange="toggleEventCount('religieux', true)">
+            <input type="radio" name="religieuxResponse" value="Oui" onchange="toggleEventCount('religieux', true)">
             <span>Oui</span>
           </label>
 
           <label class="choice-pill">
-            <input type="radio"
-                   name="religieuxResponse"
-                   value="Non"
-                   onchange="toggleEventCount('religieux', false)">
+            <input type="radio" name="religieuxResponse" value="Non" onchange="toggleEventCount('religieux', false)">
             <span>Non, avec regrets</span>
           </label>
         </div>
@@ -309,10 +305,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
       <div class="field-block">
         <label for="message">Un petit mot pour les mariés</label>
-        <textarea id="message"
-                  name="message"
-                  rows="4"
-                  placeholder="Votre message..."></textarea>
+        <textarea id="message" name="message" rows="4" placeholder="Votre message..."></textarea>
       </div>
 
       <p id="rsvpError" class="rsvp-error"></p>
@@ -324,11 +317,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
     </form>
 
-    <iframe name="hidden_iframe" style="display:none;"></iframe>
+    <iframe id="hidden_iframe" name="hidden_iframe" style="display:none;"></iframe>
 
     <div id="rsvpThanks" class="rsvp-thanks-premium">
+      <img class="thanks-logo" src="logo.png" alt="A&E">
       <div class="thanks-heart">❤</div>
-      <h3>Merci !</h3>
+      <h3>Merci</h3>
       <p>Votre réponse a bien été enregistrée.</p>
       <p class="thanks-signature">Annie &amp; Eyal</p>
       <p class="thanks-hebrew" dir="rtl">אנני &amp; אייל</p>
@@ -336,11 +330,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
   </div>
 
-  <div id="confettiLayer"></div>
+  <div id="confettiLayer" aria-hidden="true"></div>
 
 </section>
   </main>
 
-  <script src="script.js?v=7.0"></script>
+  <script src="script-v8.js?v=8.0"></script>
 </body>
 </html>
