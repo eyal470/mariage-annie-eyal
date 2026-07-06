@@ -128,15 +128,15 @@ function handleRsvpSubmit() {
     submit.classList.add("is-loading");
 
     setTimeout(() => {
-        const form = document.querySelector(".premium-rsvp");
-        const thanks = document.getElementById("rsvpThanks");
+    const form = document.querySelector(".premium-rsvp");
+    const thanks = document.getElementById("rsvpThanks");
 
-        if (form && thanks) {
-            form.style.display = "none";
-            thanks.style.display = "block";
-        }
-    }, 900);
-
+    if (form && thanks) {
+        form.style.display = "none";
+        thanks.style.display = "block";
+        launchConfetti();
+    }
+}, 900);
     return true;
 }
 
@@ -183,3 +183,27 @@ window.addEventListener("scroll", () => {
         passive: true
     });
 });
+
+function launchConfetti() {
+    const layer = document.getElementById("confettiLayer");
+    if (!layer) return;
+
+    layer.innerHTML = "";
+
+    const colors = ["#d6b56d", "#f3dfaa", "#ffffff", "#c8a86b", "#172033"];
+
+    for (let i = 0; i < 42; i++) {
+        const confetti = document.createElement("span");
+        confetti.className = "confetti";
+        confetti.style.left = Math.random() * 100 + "%";
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDelay = Math.random() * 0.45 + "s";
+        confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+        layer.appendChild(confetti);
+    }
+
+    setTimeout(() => {
+        layer.innerHTML = "";
+    }, 3200);
+}
