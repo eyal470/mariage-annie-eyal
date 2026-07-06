@@ -3141,3 +3141,47 @@ body::after{
 }
 
 }
+
+.rsvp-intro{
+  text-align:center;
+  margin-bottom:34px;
+}
+
+.rsvp-logo,
+.rsvp-title-line{
+  display:none !important;
+}
+
+.rsvp-kicker{
+  display:inline-block;
+  margin-bottom:14px;
+  color:#d6b56d !important;
+  font-family:"Inter", sans-serif !important;
+  font-size:13px !important;
+  font-weight:800 !important;
+  letter-spacing:3px !important;
+  text-transform:uppercase !important;
+}
+
+.rsvp-intro h2{
+  margin:0 0 16px;
+  color:#fff !important;
+  font-family:"Cormorant Garamond", Georgia, serif !important;
+  font-size:clamp(42px,9vw,64px) !important;
+  font-weight:600 !important;
+  line-height:1 !important;
+}
+
+.rsvp-intro p{
+  max-width:620px;
+  margin:0 auto;
+  color:rgba(255,255,255,.86) !important;
+  font-family:"Inter", sans-serif !important;
+  font-size:clamp(17px,4vw,21px) !important;
+  line-height:1.55 !important;
+}
+
+.rsvp-intro strong{
+  color:#fff !important;
+  font-weight:800 !important;
+}
