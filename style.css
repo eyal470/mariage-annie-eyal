@@ -3185,3 +3185,61 @@ body::after{
   color:#fff !important;
   font-weight:800 !important;
 }
+
+.rsvp-intro.rsvp-minimal{
+  margin:0 auto 28px !important;
+  padding:0 18px !important;
+  text-align:center !important;
+}
+
+.rsvp-intro.rsvp-minimal .rsvp-mini-line{
+  display:block;
+  width:64px;
+  height:1px;
+  margin:0 auto 18px;
+  background:linear-gradient(90deg,transparent,#d6b56d,transparent);
+}
+
+.rsvp-intro.rsvp-minimal .rsvp-small-title{
+  margin:0 0 12px !important;
+  color:#d6b56d !important;
+  font-family:"Inter",sans-serif !important;
+  font-size:13px !important;
+  font-weight:800 !important;
+  letter-spacing:4px !important;
+  text-transform:uppercase !important;
+}
+
+.rsvp-intro.rsvp-minimal .rsvp-small-text{
+  max-width:560px;
+  margin:0 auto !important;
+  color:rgba(255,255,255,.86) !important;
+  font-family:"Inter",sans-serif !important;
+  font-size:18px !important;
+  line-height:1.55 !important;
+}
+
+.rsvp-intro.rsvp-minimal .rsvp-small-text strong{
+  color:#fff !important;
+  font-weight:800 !important;
+}
+
+.rsvp-intro.rsvp-minimal h2,
+.rsvp-intro.rsvp-minimal .rsvp-kicker,
+.rsvp-intro.rsvp-minimal .rsvp-logo{
+  display:none !important;
+}
+
+@media(max-width:760px){
+  .rsvp-premium-section{
+    padding-top:46px !important;
+  }
+
+  .rsvp-intro.rsvp-minimal{
+    margin-bottom:24px !important;
+  }
+
+  .rsvp-intro.rsvp-minimal .rsvp-small-text{
+    font-size:16px !important;
+  }
+}
