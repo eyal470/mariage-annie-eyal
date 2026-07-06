@@ -2595,3 +2595,124 @@ body::after{
   font-weight:800 !important;
 }
 
+.rsvp-section-premium{
+  position:relative;
+  overflow:hidden;
+  padding:95px 20px;
+  background:
+    radial-gradient(circle at top left, rgba(214,181,109,.20), transparent 35%),
+    linear-gradient(135deg,#101827,#172033 55%,#22304a);
+}
+
+.rsvp-premium-shell{
+  max-width:860px;
+  margin:0 auto;
+}
+
+.rsvp-premium-heading{
+  text-align:center;
+  color:white;
+  margin-bottom:42px;
+}
+
+.rsvp-premium-heading h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(48px,8vw,72px);
+  font-weight:600;
+  margin:8px 0 12px;
+  color:white;
+}
+
+.rsvp-premium-heading p{
+  color:rgba(255,255,255,.82);
+  font-size:18px;
+}
+
+.rsvp-section-premium .premium-rsvp{
+  background:rgba(255,253,247,.96);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(214,181,109,.55);
+  border-radius:34px;
+  padding:36px;
+  box-shadow:0 32px 80px rgba(0,0,0,.35);
+}
+
+.rsvp-section-premium .rsvp-event-card{
+  background:#fffdf7;
+  border:1px solid rgba(214,181,109,.38);
+  border-radius:26px;
+  padding:26px;
+  margin:22px 0;
+  box-shadow:0 12px 30px rgba(23,32,51,.06);
+}
+
+.rsvp-section-premium .rsvp-event-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:34px;
+  color:#172033;
+  margin:8px 0 18px;
+}
+
+.rsvp-section-premium .choice-pill span{
+  border:1px solid rgba(214,181,109,.45);
+  background:white;
+  color:#172033;
+}
+
+.rsvp-section-premium .choice-pill input:checked + span{
+  background:linear-gradient(180deg,#E7D8B5,#D5B87A);
+  color:#172033;
+  border-color:#c7a861;
+}
+
+.rsvp-section-premium .rsvp-submit{
+  background:linear-gradient(180deg,#E7D8B5,#D5B87A)!important;
+  color:#172033!important;
+  border:1px solid #c7a861!important;
+  border-radius:999px!important;
+  box-shadow:0 16px 36px rgba(199,168,97,.35)!important;
+}
+
+.rsvp-thanks-premium{
+  display:none;
+  text-align:center;
+  background:rgba(255,253,247,.96);
+  border:1px solid rgba(214,181,109,.55);
+  border-radius:34px;
+  padding:58px 28px;
+  box-shadow:0 32px 80px rgba(0,0,0,.35);
+  animation:fadeUp .6s ease both;
+}
+
+.rsvp-thanks-premium h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:56px;
+  color:#172033;
+  margin:0 0 10px;
+}
+
+.rsvp-thanks-premium p{
+  color:#172033;
+}
+
+#confettiLayer{
+  pointer-events:none;
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+}
+
+.confetti{
+  position:absolute;
+  top:-20px;
+  width:8px;
+  height:14px;
+  background:#d6b56d;
+  opacity:.9;
+  animation:confettiFall 2.4s ease-out forwards;
+}
+
+@keyframes confettiFall{
+  0%{transform:translateY(0) rotate(0deg);opacity:1}
+  100%{transform:translateY(720px) rotate(520deg);opacity:0}
+}
