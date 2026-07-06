@@ -3,6 +3,7 @@ const weddingDate = new Date("2026-12-13T17:00:00").getTime();
 let musicPlaying = false;
 let musicStartedOnce = false;
 let rsvpSubmitted = false;
+let rsvpThanksShown = false;
 
 function updateCountdown() {
     const now = new Date().getTime();
@@ -93,10 +94,7 @@ function toggleEventCount(eventName, isYes) {
 
     if (isYes) {
         panel.classList.add("is-visible");
-
-        if (Number(input.value) === 0) {
-            input.value = 1;
-        }
+        if (Number(input.value) === 0) input.value = 1;
     } else {
         panel.classList.remove("is-visible");
         input.value = 0;
@@ -136,17 +134,24 @@ function handleRsvpSubmit() {
     }
 
     rsvpSubmitted = true;
+    rsvpThanksShown = false;
 
     if (submit) {
         submit.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i><span>Enregistrement...</span>';
         submit.classList.add("is-loading");
     }
 
+    setTimeout(() => {
+        showRsvpThanks();
+    }, 350);
+
     return true;
 }
 
 function showRsvpThanks() {
-    if (!rsvpSubmitted) return;
+    if (!rsvpSubmitted || rsvpThanksShown) return;
+
+    rsvpThanksShown = true;
 
     const form = document.querySelector(".premium-rsvp");
     const thanks = document.getElementById("rsvpThanks");
