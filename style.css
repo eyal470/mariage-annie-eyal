@@ -3243,3 +3243,44 @@ body::after{
     font-size:16px !important;
   }
 }
+
+.luxury-card{
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(rgba(255,252,246,.78), rgba(255,252,246,.78)),
+        url("pap.png") center/700px auto repeat;
+
+    border:1px solid rgba(208,180,114,.55);
+    border-radius:34px;
+
+    box-shadow:
+        0 30px 70px rgba(15,20,35,.12),
+        0 10px 24px rgba(0,0,0,.05),
+        inset 0 1px 0 rgba(255,255,255,.85),
+        inset 0 -1px 0 rgba(210,182,112,.18);
+
+    transition:.35s;
+}
+
+.luxury-card-inner{
+
+    min-height:720px;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:38px 34px;
+
+    border-radius:26px;
+
+    border:1px solid rgba(214,181,109,.30);
+
+    background:
+        linear-gradient(rgba(255,255,255,.18), rgba(255,255,255,.18));
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.35),
+        inset 0 8px 35px rgba(255,255,255,.25);
+}
