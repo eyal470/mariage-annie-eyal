@@ -3305,3 +3305,15 @@ body::after{
   background: transparent !important;
 }
 
+/* FORCE PAPIER CARTONS */
+article.luxury-card.civil-invitation-card,
+article.luxury-card.religious-invitation-card {
+  background: url("./pap.png") center / cover no-repeat !important;
+  background-color: transparent !important;
+}
+
+article.luxury-card.civil-invitation-card > .luxury-card-inner,
+article.luxury-card.religious-invitation-card > .luxury-card-inner {
+  background: transparent !important;
+  background-image: none !important;
+}
