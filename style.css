@@ -243,14 +243,13 @@ section p {
 .invitation-card {
     width: 100%;
     max-width: 850px;
-    background-image: url("pap.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
     display: flex;
     flex-direction: column;
+
     border-radius: 34px;
     padding: 12px;
+
     box-shadow: 0 26px 70px rgba(23,32,51,.12);
     border: 1px solid rgba(200,168,107,.35);
 }
@@ -260,10 +259,12 @@ section p {
     border: 1px solid rgba(200,168,107,.55);
     border-radius: 26px;
     padding: 40px 34px;
-    background-image: url("pap.png");
+
+    background-image: url("./pap.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+
     display: flex;
     flex-direction: column;
 }
