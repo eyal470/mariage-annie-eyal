@@ -260,7 +260,7 @@ section p {
     border-radius: 26px;
     padding: 40px 34px;
 
-    background-image: url("./pap.png");
+    background: red !important;
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
