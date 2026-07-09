@@ -222,6 +222,11 @@ revealOnScroll();
 updateHeroParallax();
 
 window.addEventListener("load", () => {
+
+    document.querySelectorAll(".luxury-card").forEach(card=>{
+    card.classList.add("reveal");
+});
+    
     revealOnScroll();
     updateHeroParallax();
 
