@@ -1113,9 +1113,31 @@ section p {
     border-radius: 24px;
   }
 
-  .card-logo img {
-    width: 78px;
-  }
+  .card-logo img{
+
+width:94px;
+
+filter:
+
+drop-shadow(0 8px 18px rgba(0,0,0,.18))
+
+drop-shadow(0 0 18px rgba(214,181,109,.28));
+
+transition:.6s;
+
+}
+
+.luxury-card:hover .card-logo img{
+
+transform:scale(1.05);
+
+filter:
+
+drop-shadow(0 12px 22px rgba(0,0,0,.22))
+
+drop-shadow(0 0 24px rgba(214,181,109,.40));
+
+}
 
   .civil-title {
     font-size: 34px;
@@ -1244,3 +1266,65 @@ article.luxury-card.religious-invitation-card > .luxury-card-inner,
   background-color: transparent !important;
 }
 
+/* ==========================================================
+   Apparition premium des cartons
+========================================================== */
+
+.reveal{
+    opacity:0;
+    transform:translateY(90px) scale(.97);
+    transition:
+        opacity .9s ease,
+        transform 1.2s cubic-bezier(.22,.61,.36,1);
+}
+
+.reveal.visible{
+    opacity:1;
+    transform:translateY(0) scale(1);
+}
+
+/* ==========================================================
+   Halo de lumière
+========================================================== */
+
+.luxury-card::before{
+
+content:"";
+
+position:absolute;
+
+inset:-35%;
+
+pointer-events:none;
+
+background:
+
+radial-gradient(circle,
+rgba(255,240,185,.18) 0%,
+rgba(255,240,185,.05) 35%,
+transparent 65%);
+
+animation:goldGlow 9s ease-in-out infinite;
+
+mix-blend-mode:screen;
+
+}
+
+@keyframes goldGlow{
+
+0%{
+transform:translate(-8%,-5%) rotate(0deg);
+opacity:.35;
+}
+
+50%{
+transform:translate(6%,5%) rotate(6deg);
+opacity:.65;
+}
+
+100%{
+transform:translate(-8%,-5%) rotate(0deg);
+opacity:.35;
+}
+
+}
