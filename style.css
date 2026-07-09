@@ -1414,3 +1414,16 @@ opacity:.35;
     drop-shadow(0 5px 10px rgba(23,32,51,.14))
     drop-shadow(0 0 12px rgba(214,181,109,.30)) !important;
 }
+
+/* Utilisation du papier clair pour les fonds doux */
+body {
+  background:
+    linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.55)),
+    url("pap-light.png") center / 900px auto repeat !important;
+}
+
+.rsvp-premium-section::before {
+  background:
+    linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.10)),
+    url("pap-light.png") center / 850px auto repeat !important;
+}
