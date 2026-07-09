@@ -1230,3 +1230,16 @@ section p {
     font-size: 9px;
   }
 }
+
+/* Papier premium final - cartons Mairie + Houppa */
+article.luxury-card.civil-invitation-card,
+article.luxury-card.religious-invitation-card {
+  background: url("pap.png") center / cover no-repeat !important;
+}
+
+article.luxury-card.civil-invitation-card > .luxury-card-inner,
+article.luxury-card.religious-invitation-card > .luxury-card-inner,
+.luxury-card-inner.civil-card-inner {
+  background: url("pap.png") center / cover no-repeat !important;
+  background-color: transparent !important;
+}
