@@ -3295,13 +3295,13 @@ body::after{
 }
 
 /* Papier premium final sur les 2 cartons */
+/* Papier premium final sur les 2 cartons */
 .luxury-card {
-    background:
-        linear-gradient(rgba(255,252,246,.55), rgba(255,252,246,.55)),
-        url("./pap.png") center / cover no-repeat !important;
+  background:
+    url("./pap.png") center / cover no-repeat !important;
 }
 
 .luxury-card-inner {
-    background: rgba(255,253,247,.35) !important;
+  background: transparent !important;
 }
 
