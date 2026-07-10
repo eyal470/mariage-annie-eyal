@@ -1595,3 +1595,141 @@ body {
     padding-top: 80px !important;
   }
 }
+
+  /* ==========================================================
+   MONOGRAMME A&E EN RELIEF — CORRECTION FORCÉE
+========================================================== */
+
+/* Autoriser le médaillon à dépasser du carton */
+article.luxury-card {
+  overflow: visible !important;
+  margin-top: 70px !important;
+}
+
+article.luxury-card > .luxury-card-inner {
+  overflow: visible !important;
+  padding-top: 78px !important;
+}
+
+/* Petit carton monogrammé */
+article.luxury-card .card-logo {
+  position: absolute !important;
+  top: -66px !important;
+  left: 50% !important;
+  z-index: 50 !important;
+
+  width: 132px !important;
+  height: 142px !important;
+  min-height: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  margin: 0 !important;
+  padding: 18px !important;
+  overflow: visible !important;
+
+  border: 1px solid rgba(190, 145, 48, .82) !important;
+  border-radius: 4px !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, .72),
+      rgba(244, 235, 215, .38)
+    ),
+    url("pap-light.png") center / cover no-repeat !important;
+
+  box-shadow:
+    0 26px 38px rgba(43, 31, 15, .25),
+    0 8px 14px rgba(43, 31, 15, .16),
+    inset 0 0 0 6px rgba(255, 252, 244, .78),
+    inset 0 0 0 7px rgba(190, 145, 48, .35) !important;
+
+  clip-path: polygon(
+    14% 0,
+    86% 0,
+    91% 6%,
+    100% 10%,
+    100% 90%,
+    91% 94%,
+    86% 100%,
+    14% 100%,
+    9% 94%,
+    0 90%,
+    0 10%,
+    9% 6%
+  );
+
+  transform: translateX(-50%) rotate(-0.7deg) !important;
+}
+
+article.religious-invitation-card .card-logo {
+  transform: translateX(-50%) rotate(0.7deg) !important;
+}
+
+/* Double filet doré intérieur */
+article.luxury-card .card-logo::before {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  z-index: 1;
+  pointer-events: none;
+
+  border: 1px solid rgba(190, 145, 48, .55);
+  clip-path: inherit;
+}
+
+/* Reflet de lumière discret */
+article.luxury-card .card-logo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .62),
+    transparent 42%
+  );
+}
+
+/* Logo */
+article.luxury-card .card-logo img {
+  position: relative !important;
+  z-index: 3 !important;
+
+  display: block !important;
+  width: 96px !important;
+  height: auto !important;
+
+  opacity: 1 !important;
+
+  filter:
+    drop-shadow(0 2px 2px rgba(23, 32, 51, .12))
+    drop-shadow(0 0 6px rgba(200, 168, 107, .15)) !important;
+}
+
+/* Téléphone */
+@media (max-width: 760px) {
+  article.luxury-card {
+    margin-top: 58px !important;
+  }
+
+  article.luxury-card > .luxury-card-inner {
+    padding-top: 68px !important;
+  }
+
+  article.luxury-card .card-logo {
+    top: -54px !important;
+    width: 108px !important;
+    height: 116px !important;
+    padding: 14px !important;
+  }
+
+  article.luxury-card .card-logo img {
+    width: 78px !important;
+  }
+}
