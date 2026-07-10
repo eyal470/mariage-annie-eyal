@@ -1799,3 +1799,96 @@ article.luxury-card .card-logo img {
     width: 78px !important;
   }
 }
+
+  /* ==========================================================
+   MONOGRAMME A&E — VERSION ÉPURÉE ET PREMIUM
+========================================================== */
+
+.card-logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+  width: 106px;
+  height: 132px;
+
+  margin: -46px auto 38px;
+  padding: 14px;
+
+  overflow: visible;
+
+  border: 1px solid rgba(190, 148, 55, .58);
+  border-radius: 5px;
+
+  background:
+    linear-gradient(
+      rgba(255, 254, 250, .82),
+      rgba(246, 240, 228, .82)
+    ),
+    url("pap-light.png") center / cover no-repeat;
+
+  box-shadow:
+    0 20px 34px rgba(45, 35, 20, .16),
+    0 6px 12px rgba(45, 35, 20, .09),
+    inset 0 1px 0 rgba(255, 255, 255, .95);
+
+  transform: translateY(-12px) rotate(-0.35deg);
+}
+
+.religious-invitation-card .card-logo {
+  transform: translateY(-12px) rotate(0.35deg);
+}
+
+.card-logo::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  pointer-events: none;
+
+  border: 1px solid rgba(190, 148, 55, .22);
+  border-radius: 3px;
+}
+
+.card-logo::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 7px;
+  height: 32%;
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, .50),
+    transparent
+  );
+
+  border-radius: 3px;
+}
+
+.card-logo img {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+  width: 82px;
+  height: auto;
+
+  opacity: 1;
+
+  filter:
+    drop-shadow(0 2px 3px rgba(23, 32, 51, .10))
+    drop-shadow(0 0 5px rgba(200, 168, 107, .10));
+}
+  /* Permet au monogramme de dépasser légèrement */
+.luxury-card {
+  overflow: visible;
+}
+
+.luxury-card-inner {
+  overflow: visible;
+  padding-top: 72px;
+}
