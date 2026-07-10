@@ -643,17 +643,22 @@ section p {
   max-width: none;
   padding: 96px 20px 110px;
   background:
-    radial-gradient(circle at 18% 8%, rgba(214, 181, 109, .22), transparent 30%),
-    radial-gradient(circle at 90% 78%, rgba(214, 181, 109, .10), transparent 34%),
-    linear-gradient(135deg, #101827 0%, var(--night) 55%, var(--night-2) 100%);
-}
+    radial-gradient(circle at 12% 18%, rgba(214,181,109,.18), transparent 34%),
+radial-gradient(circle at 88% 82%, rgba(255,235,185,.08), transparent 40%),
+linear-gradient(
+    135deg,
+    #566170 0%,
+    #415063 28%,
+    #2e4058 65%,
+    #22334b 100%
+);
 
 .rsvp-premium-section::before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: .16;
+  opacity: .08;
   background:
     linear-gradient(rgba(255, 255, 255, .08), rgba(255, 255, 255, .08)),
     url("pap.png") center / 760px auto repeat;
