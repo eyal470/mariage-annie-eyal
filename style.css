@@ -1842,3 +1842,112 @@ article.luxury-card .card-logo img {
     width: 75px !important;
   }
 }
+
+/* ==========================================================
+   CORRECTION RESPONSIVE MOBILE — SUPPRESSION DÉBORDEMENT
+========================================================== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main,
+section,
+.celebrations-section,
+.luxury-cards,
+.rsvp-premium-section,
+.rsvp-premium-wrap {
+  width: 100%;
+  max-width: 100%;
+}
+
+.luxury-cards {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.luxury-card,
+.premium-rsvp {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Le halo ne doit plus agrandir la page */
+.luxury-card::before {
+  inset: 0 !important;
+  border-radius: inherit;
+}
+
+/* Sécurise les images et les champs */
+img,
+svg,
+input,
+textarea,
+button {
+  max-width: 100%;
+}
+
+@media (max-width: 760px) {
+
+  section {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .celebrations-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .luxury-cards {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  article.luxury-card {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  article.luxury-card > .luxury-card-inner {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .location-photo {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .location-photo img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .premium-rsvp {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .rsvp-event-card {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .music-player {
+    max-width: calc(100vw - 24px);
+  }
+}
