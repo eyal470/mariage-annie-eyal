@@ -709,15 +709,11 @@ section p {
   max-width: none;
   padding: 96px 20px 110px;
   background:
-    radial-gradient(circle at 12% 18%, rgba(214,181,109,.18), transparent 34%),
-    radial-gradient(circle at 88% 82%, rgba(255,235,185,.08), transparent 40%),
-    linear-gradient(
-      135deg,
-      #566170 0%,
-      #415063 28%,
-      #2e4058 65%,
-      #22334b 100%
-    );
+    radial-gradient(circle at top,
+            rgba(214,181,109,.12),
+            transparent 45%),
+        linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.88)),
+        url("pap-light.png") center/850px repeat;;
 }
 
 .rsvp-premium-section::before {
