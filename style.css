@@ -1947,3 +1947,82 @@ button {
     max-width: calc(100vw - 24px);
   }
 }
+/* Bouquet floral premium du carton Mairie */
+.civil-bouquet {
+  position: relative;
+  width: 118px;
+  height: 86px;
+  margin: 6px auto 30px;
+  color: #c8a86b;
+}
+
+.civil-bouquet span {
+  position: absolute;
+  display: block;
+  line-height: 1;
+}
+
+.bouquet-flower {
+  left: 50%;
+  top: 17px;
+  transform: translateX(-50%);
+  color: #172033;
+  font-size: 42px;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.7),
+    0 4px 10px rgba(23,32,51,.10);
+}
+
+.bouquet-leaf {
+  top: 28px;
+  color: #c8a86b;
+  font-size: 38px;
+  opacity: .92;
+}
+
+.bouquet-leaf-left {
+  left: 12px;
+  transform: rotate(-34deg);
+}
+
+.bouquet-leaf-right {
+  right: 12px;
+  transform: scaleX(-1) rotate(-34deg);
+}
+
+.bouquet-dot {
+  color: #d6b56d;
+  font-size: 18px;
+}
+
+.bouquet-dot-1 {
+  left: 26px;
+  top: 12px;
+}
+
+.bouquet-dot-2 {
+  right: 26px;
+  top: 12px;
+}
+
+.bouquet-dot-3 {
+  left: 50%;
+  top: 1px;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 760px) {
+  .civil-bouquet {
+    width: 104px;
+    height: 76px;
+    margin-bottom: 24px;
+  }
+
+  .bouquet-flower {
+    font-size: 37px;
+  }
+
+  .bouquet-leaf {
+    font-size: 34px;
+  }
+}
