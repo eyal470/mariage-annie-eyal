@@ -1996,10 +1996,6 @@ button {
    Bouquet - Mariage civil
 ========================================== */
 
-/* ==========================================
-   Bouquet - Mariage civil
-========================================== */
-
 .civil-bouquet{
     width:150px;
     height:150px;
@@ -2121,8 +2117,119 @@ button {
   transform: translateY(0);
 }
 
-.location-button-icon {
+/* ==========================================================
+   CORRECTIONS FINALES — VERSION STABLE
+========================================================== */
+
+/* Boutons itinéraires strictement alignés sur le bouton RSVP */
+.map-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 18px;
+}
+
+.location-button {
+  width: 100% !important;
+  min-height: 62px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px;
+  margin: 0 !important;
+  padding: 18px 24px !important;
+  border: 1px solid #c7a861 !important;
+  border-radius: 999px !important;
+  background: linear-gradient(180deg, #e7d8b5 0%, #d5b87a 100%) !important;
+  color: var(--night) !important;
+  font-family: Inter, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none !important;
+  box-shadow:
+    0 12px 28px rgba(199, 168, 97, .32),
+    inset 0 1px 0 rgba(255, 255, 255, .55) !important;
+  transition: transform .2s ease, box-shadow .25s ease !important;
+}
+
+.location-button:visited {
+  color: var(--night) !important;
+}
+
+.location-button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 18px 36px rgba(199, 168, 97, .36),
+    inset 0 1px 0 rgba(255, 255, 255, .55) !important;
+}
+
+.location-button:active {
+  transform: translateY(0) scale(.99);
+}
+
+.location-button i {
   flex: 0 0 auto;
-  font-size: 1.05em;
-  line-height: 1;
+  width: 24px;
+  font-size: 21px !important;
+  text-align: center;
+}
+
+.location-button span {
+  font-size: inherit !important;
+  white-space: normal;
+}
+
+/* Bouquet et alliances harmonisés */
+.civil-bouquet,
+.houppa-alliances {
+  width: 150px !important;
+  height: 150px !important;
+  aspect-ratio: 1 / 1;
+  margin: 40px auto 42px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  background: #fcf8ef !important;
+  box-shadow:
+    0 8px 20px rgba(15, 28, 52, .08),
+    0 0 0 1px rgba(202, 167, 83, .18) !important;
+}
+
+.civil-bouquet img {
+  display: block !important;
+  width: 138% !important;
+  height: 138% !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: translateY(6px) !important;
+}
+
+.houppa-alliances img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transform: scale(1.1) !important;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .map-actions {
+    gap: 14px;
+  }
+
+  .location-button {
+    min-height: 60px;
+    padding: 17px 18px !important;
+    font-size: 17px !important;
+  }
 }
