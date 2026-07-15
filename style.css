@@ -2273,3 +2273,9 @@ main {
     margin-bottom: 82px !important;
   }
 }
+
+
+/* ===== RSVP centré ===== */
+.rsvp-event-head{text-align:center;}
+.rsvp-date{display:block;text-align:center;margin:0 0 16px;}
+.rsvp-title{text-align:center!important;margin:0 0 28px!important;line-height:1.05!important;}
