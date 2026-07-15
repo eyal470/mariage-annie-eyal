@@ -8,9 +8,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<link rel="preload" as="image" href="nous.png" fetchpriority="high">
+<link rel="preload" as="image" href="mairie-maisons-alfort.jpg">
+<link rel="preload" as="image" href="moulin-brule.jpg">
+<link rel="preload" as="image" href="logo-ae-optimise.png">
+
+
 <title>Mariage Annie & Eyal</title>
 
-<link rel="stylesheet" href="style.css?v=58.0" />
+<link rel="stylesheet" href="style.css?v=59.0" />
 
 <!-- Favicons -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -44,7 +50,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
   <nav class="top-logo-bar" aria-label="Navigation principale">
     <div class="top-nav-links">
-      <a href="#mairie" class="top-nav-link">
+      <a href="#mairie" class="top-nav-link is-active" aria-current="page">
         <i class="fa-solid fa-building-columns"></i>
         <span>Mairie</span>
       </a>
@@ -64,6 +70,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       <img src="logo-ae-optimise.png" alt="Annie &amp; Eyal">
     </a>
   </nav>
+
+  <div id="navFeedback" class="nav-feedback" aria-hidden="true">✦</div>
 
   <button id="musicBtn" class="music-player" onclick="toggleMusic()" type="button">
     <span id="musicIcon" class="music-icon">♪</span>
@@ -412,6 +420,57 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 </section>
   </main>
+
+
+  <script>
+    (() => {
+      const header = document.querySelector(".top-logo-bar");
+      const links = [...document.querySelectorAll(".top-nav-link")];
+      const sections = links.map(link => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+      const feedback = document.getElementById("navFeedback");
+      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      const setActive = (id) => {
+        links.forEach(link => {
+          const active = link.getAttribute("href") === `#${id}`;
+          link.classList.toggle("is-active", active);
+          active ? link.setAttribute("aria-current", "page") : link.removeAttribute("aria-current");
+        });
+      };
+
+      links.forEach(link => {
+        link.addEventListener("click", () => {
+          setActive(link.getAttribute("href").slice(1));
+          if (feedback && !reduced.matches) {
+            feedback.classList.remove("is-visible");
+            void feedback.offsetWidth;
+            feedback.classList.add("is-visible");
+          }
+        });
+      });
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          const visible = entries.filter(e => e.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+          if (visible) setActive(visible.target.id);
+        }, { rootMargin: "-28% 0px -55% 0px", threshold: [0.08, 0.2, 0.4, 0.65] });
+        sections.forEach(section => observer.observe(section));
+      }
+
+      let ticking = false;
+      const updateHeader = () => {
+        if (header) header.classList.toggle("is-compact", window.scrollY > 90);
+        ticking = false;
+      };
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          requestAnimationFrame(updateHeader);
+          ticking = true;
+        }
+      }, { passive: true });
+      updateHeader();
+    })();
+  </script>
 
   <script src="script.js?v=6.0"></script>
 </body>
