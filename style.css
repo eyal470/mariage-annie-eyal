@@ -2514,3 +2514,47 @@ main {
     scroll-margin-top: 90px !important;
   }
 }
+
+/* ==========================================================
+   PHOTOS DES LIEUX — MOBILE PAYSAGE ANDROID + iOS
+========================================================== */
+
+@media screen and (orientation: landscape) and (max-height: 600px) and (max-width: 1024px) {
+
+  .location-photo {
+    width: min(92%, 920px) !important;
+    height: auto !important;
+    margin: 24px auto 30px !important;
+    overflow: hidden !important;
+    border-radius: 18px !important;
+    background: #f7f1e5;
+  }
+
+  .location-photo img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform: none !important;
+  }
+
+  .location-photo-mairie {
+    width: min(82%, 820px) !important;
+  }
+
+  .location-photo-moulin {
+    width: min(92%, 940px) !important;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media screen and (orientation: landscape) and (max-height: 600px) {
+    .location-photo img {
+      height: auto !important;
+      -webkit-object-fit: contain;
+    }
+  }
+}
