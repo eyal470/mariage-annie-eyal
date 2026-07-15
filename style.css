@@ -1992,31 +1992,38 @@ button {
   }
 }
 
-.civil-bouquet {
-  width: min(78vw, 380px);
-  aspect-ratio: 16 / 9;
-  margin: 75px auto 55px;
+/* ==========================================
+   Bouquet - Mariage civil
+========================================== */
 
-  border-radius: 24px;
-  overflow: hidden;
-  background: #fffdf9;
+.civil-bouquet{
+    width:150px;
+    height:150px;
 
-  box-shadow:
-    0 10px 26px rgba(15, 28, 52, 0.10),
-    0 0 0 1px rgba(200, 165, 85, 0.20);
+    margin:40px auto 42px;
+
+    border-radius:50%;
+    overflow:hidden;
+
+    background:#fffaf2;
+
+    box-shadow:
+        0 8px 20px rgba(15,28,52,.08),
+        0 0 0 1px rgba(202,167,83,.18);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-.civil-bouquet img {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
+.civil-bouquet img{
+    width:84%;
+    height:84%;
 
-  object-fit: cover !important;
-  object-position: center !important;
+    object-fit:contain;
+    object-position:center;
 
-  padding: 0 !important;
-  margin: 0 !important;
-  border-radius: 0 !important;
+    display:block;
 }
 
 .houppa-alliances {
