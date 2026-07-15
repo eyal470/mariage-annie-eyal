@@ -2303,18 +2303,26 @@ main {
 }
 
 .top-logo-link {
-  grid-column: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .top-logo-link img {
-  display: block;
-  width: auto;
-  height: 49px;
-  filter: drop-shadow(0 3px 8px rgba(23, 32, 51, .10));
+    display: block;
+    width: auto;
+    height: 72px;      /* avant : 49px */
+    filter: drop-shadow(0 3px 8px rgba(23, 32, 51, .10));
+    background: transparent;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .top-logo-link img {
+        height: 64px;
+    }
 }
 
 .top-nav-links {
