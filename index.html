@@ -10,7 +10,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <title>Mariage Annie & Eyal</title>
 
-<link rel="stylesheet" href="style.css?v=51.0" />
+<link rel="stylesheet" href="style.css?v=52.0" />
 
 <!-- Favicons -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -42,9 +42,28 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <body>
   <audio id="weddingMusic" src="music.mp3" loop></audio>
 
-  <div class="top-logo-bar">
-    <img src="logo.png" alt="Logo Annie et Eyal" />
-  </div>
+  <nav class="top-logo-bar" aria-label="Navigation principale">
+    <div class="top-nav-links">
+      <a href="#mairie" class="top-nav-link">
+        <i class="fa-solid fa-building-columns"></i>
+        <span>Mairie</span>
+      </a>
+
+      <a href="#houppa" class="top-nav-link">
+        <i class="fa-solid fa-ring"></i>
+        <span>Houppa</span>
+      </a>
+
+      <a href="#rsvp" class="top-nav-link">
+        <i class="fa-regular fa-heart"></i>
+        <span>RSVP</span>
+      </a>
+    </div>
+
+    <a href="#" class="top-logo-link" aria-label="Retour en haut de la page">
+      <img src="logo.png" alt="Logo Annie et Eyal">
+    </a>
+  </nav>
 
   <button id="musicBtn" class="music-player" onclick="toggleMusic()" type="button">
     <span id="musicIcon" class="music-icon">♪</span>
@@ -102,7 +121,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
   <div class="luxury-cards">
 
-    <article class="luxury-card civil-invitation-card">
+    <article id="mairie" class="luxury-card civil-invitation-card">
  <div class="luxury-card-inner civil-card-inner">
 
     <div class="card-logo">
@@ -179,7 +198,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
   </div>
 </article>
 
-   <article class="luxury-card religious-invitation-card reveal">
+   <article id="houppa" class="luxury-card religious-invitation-card reveal">
   <div class="luxury-card-inner">
 
     <div class="card-logo">
