@@ -2312,17 +2312,24 @@ main {
 
 .top-logo-link img {
     display: block;
+    height: 90px;
     width: auto;
-    height: 72px;      /* avant : 49px */
-    filter: drop-shadow(0 3px 8px rgba(23, 32, 51, .10));
     background: transparent;
     border: none;
+    filter: drop-shadow(0 4px 12px rgba(23,32,51,.12));
+    transition: transform .25s ease;
 }
 
-@media (max-width: 768px) {
-    .top-logo-link img {
-        height: 64px;
+.top-logo-link:hover img{
+    transform: scale(1.04);
+}
+
+@media (max-width:768px){
+
+    .top-logo-link img{
+        height:72px;
     }
+
 }
 
 .top-nav-links {
