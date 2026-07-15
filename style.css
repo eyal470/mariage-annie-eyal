@@ -440,7 +440,6 @@ section p {
 }
 
 .card-symbol,
-.civil-bouquet,
 .luxury-separator {
   color: var(--gold);
 }
@@ -456,12 +455,6 @@ section p {
   margin: 10px 0 26px;
   font-size: 34px;
   letter-spacing: 2px;
-}
-
-.civil-bouquet {
-  margin-bottom: 20px;
-  font-size: 54px;
-  color: var(--night);
 }
 
 .civil-names {
@@ -1947,85 +1940,7 @@ button {
     max-width: calc(100vw - 24px);
   }
 }
-/* Bouquet floral premium du carton Mairie */
-.civil-bouquet {
-  position: relative;
-  width: 118px;
-  height: 86px;
-  margin: 6px auto 30px;
-  color: #c8a86b;
-}
 
-.civil-bouquet span {
-  position: absolute;
-  display: block;
-  line-height: 1;
-}
-
-.bouquet-flower {
-  left: 50%;
-  top: 17px;
-  transform: translateX(-50%);
-  color: #172033;
-  font-size: 42px;
-  text-shadow:
-    0 1px 0 rgba(255,255,255,.7),
-    0 4px 10px rgba(23,32,51,.10);
-}
-
-.bouquet-leaf {
-  top: 28px;
-  color: #c8a86b;
-  font-size: 38px;
-  opacity: .92;
-}
-
-.bouquet-leaf-left {
-  left: 12px;
-  transform: rotate(-34deg);
-}
-
-.bouquet-leaf-right {
-  right: 12px;
-  transform: scaleX(-1) rotate(-34deg);
-}
-
-.bouquet-dot {
-  color: #d6b56d;
-  font-size: 18px;
-}
-
-.bouquet-dot-1 {
-  left: 26px;
-  top: 12px;
-}
-
-.bouquet-dot-2 {
-  right: 26px;
-  top: 12px;
-}
-
-.bouquet-dot-3 {
-  left: 50%;
-  top: 1px;
-  transform: translateX(-50%);
-}
-
-@media (max-width: 760px) {
-  .civil-bouquet {
-    width: 104px;
-    height: 76px;
-    margin-bottom: 24px;
-  }
-
-  .bouquet-flower {
-    font-size: 37px;
-  }
-
-  .bouquet-leaf {
-    font-size: 34px;
-  }
-}
 
 /* ==========================================================
    HERO MOBILE — texte sous les visages
@@ -2078,27 +1993,28 @@ button {
 }
 
 .civil-bouquet {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: min(78vw, 380px);
+  aspect-ratio: 16 / 9;
+  margin: 75px auto 55px;
 
-    /* Descend le bouquet sous le logo */
-    margin: 55px 0 42px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fffdf9;
+
+  box-shadow:
+    0 10px 26px rgba(15, 28, 52, 0.10),
+    0 0 0 1px rgba(200, 165, 85, 0.20);
 }
 
 .civil-bouquet img {
-    width: min(82%, 430px);
-    height: auto;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
 
-    border-radius: 26px;
+  object-fit: cover !important;
+  object-position: center !important;
 
-    background: #ffffff;
-
-    padding: 18px;
-
-    box-shadow:
-        0 8px 28px rgba(0,0,0,.10),
-        inset 0 0 0 1px rgba(212,184,112,.20);
-
-    display: block;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
 }
