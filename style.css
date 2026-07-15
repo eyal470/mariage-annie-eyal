@@ -2558,3 +2558,39 @@ main {
     }
   }
 }
+
+/* ==========================================================
+   PHOTOS DES LIEUX — ORDINATEUR
+   Empêche les images de s'étirer sur toute la largeur du carton
+   et conserve leur ratio naturel sans recadrage.
+========================================================== */
+
+@media screen and (min-width: 1025px) {
+
+  .location-photo {
+    height: auto !important;
+    margin: 30px auto 34px !important;
+    overflow: hidden !important;
+    border-radius: 18px !important;
+    background: #f7f1e5;
+  }
+
+  .location-photo img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform: none !important;
+  }
+
+  .location-photo-mairie {
+    width: min(82%, 760px) !important;
+  }
+
+  .location-photo-moulin {
+    width: min(86%, 820px) !important;
+  }
+}
