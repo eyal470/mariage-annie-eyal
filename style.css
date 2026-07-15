@@ -2294,3 +2294,29 @@ main {
     transform: translateZ(0);
   }
 }
+
+/* ==========================================
+   Hommage discret
+========================================== */
+
+.memorial-section{
+    margin:50px auto 15px;
+    text-align:center;
+}
+
+.memorial-text{
+    max-width:540px;
+    margin:0 auto;
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.05rem;      /* plus petit */
+    line-height:1.85;
+    font-style:italic;
+    font-weight:400;
+    color:#5d564d;          /* légèrement plus clair */
+    letter-spacing:0.15px;
+    opacity:0.82;           /* plus discret */
+}
+
+.memorial-text + .memorial-text{
+    margin-top:28px;
+}
