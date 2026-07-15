@@ -2078,17 +2078,27 @@ button {
 }
 
 .civil-bouquet {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 28px auto 36px;
-    width: 100%;
+
+    /* Descend le bouquet sous le logo */
+    margin: 55px 0 42px;
 }
 
-.civil-bouquet-image {
-    display: block;
-    width: min(58vw, 360px);
+.civil-bouquet img {
+    width: min(82%, 430px);
     height: auto;
-    max-width: 100%;
-    object-fit: contain;
+
+    border-radius: 26px;
+
+    background: #ffffff;
+
+    padding: 18px;
+
+    box-shadow:
+        0 8px 28px rgba(0,0,0,.10),
+        inset 0 0 0 1px rgba(212,184,112,.20);
+
+    display: block;
 }
