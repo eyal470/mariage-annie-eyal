@@ -2078,19 +2078,14 @@ button {
 }
 
 .civil-bouquet {
-  width: min(72%, 320px);
-  margin: 28px auto 34px;
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 28px;
 }
 
 .civil-bouquet-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 210px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 22px;
-  box-shadow: 0 10px 28px rgba(15, 28, 52, 0.12);
+    width: 260px;          /* ajuste entre 220 et 300px selon ton goût */
+    height: auto;
+    display: block;
 }
