@@ -1996,6 +1996,10 @@ button {
    Bouquet - Mariage civil
 ========================================== */
 
+/* ==========================================
+   Bouquet - Mariage civil
+========================================== */
+
 .civil-bouquet{
     width:150px;
     height:150px;
@@ -2005,25 +2009,27 @@ button {
     border-radius:50%;
     overflow:hidden;
 
-    background:#fffaf2;
+    background:#fcf8ef;
 
     box-shadow:
         0 8px 20px rgba(15,28,52,.08),
         0 0 0 1px rgba(202,167,83,.18);
 
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 }
 
 .civil-bouquet img{
-    width:84%;
-    height:84%;
+    width:128%;
+    height:128%;
 
     object-fit:contain;
     object-position:center;
 
     display:block;
+
+    transform:translateY(4px);
 }
 
 .houppa-alliances {
