@@ -2441,3 +2441,76 @@ main {
     scroll-margin-top: 132px;
   }
 }
+
+/* ==========================================================
+   CORRECTION MOBILE EN MODE PAYSAGE
+========================================================== */
+
+@media (max-width: 950px) and (orientation: landscape) {
+
+  .top-logo-bar {
+    height: 72px !important;
+    grid-template-columns: auto 1fr auto !important;
+    grid-template-rows: 72px !important;
+    padding: 0 170px 0 18px !important;
+  }
+
+  .top-nav-links {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    justify-content: flex-start !important;
+    gap: 22px !important;
+  }
+
+  .top-logo-link {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    justify-self: center !important;
+    width: 135px !important;
+    height: 66px !important;
+  }
+
+  .top-logo-link img {
+    width: 125px !important;
+    max-height: 58px !important;
+  }
+
+  .top-nav-link {
+    font-size: 15px !important;
+    gap: 5px !important;
+  }
+
+  .top-nav-link i {
+    font-size: 14px !important;
+  }
+
+  .music-player {
+    top: 10px !important;
+    right: 12px !important;
+    padding: 8px 12px !important;
+  }
+
+  .music-player strong {
+    font-size: 12px !important;
+  }
+
+  .music-player small {
+    font-size: 10px !important;
+  }
+
+  .music-icon {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 17px !important;
+  }
+
+  .hero {
+    padding-top: 88px !important;
+  }
+
+  #mairie,
+  #houppa,
+  #rsvp {
+    scroll-margin-top: 90px !important;
+  }
+}
