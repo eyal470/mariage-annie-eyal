@@ -2018,3 +2018,33 @@ button {
   margin: 0 !important;
   border-radius: 0 !important;
 }
+
+.houppa-alliances {
+  width: min(28vw, 150px);
+  aspect-ratio: 1 / 1;
+  margin: 34px auto 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: #fffaf2;
+
+  box-shadow:
+    0 8px 20px rgba(15, 28, 52, 0.08),
+    0 0 0 1px rgba(202, 167, 83, 0.18);
+}
+
+.houppa-alliances img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1.1);
+}
