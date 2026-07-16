@@ -16,7 +16,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <title>Mariage Annie & Eyal</title>
 
-<link rel="stylesheet" href="style.css?v=59.0" />
+<link rel="stylesheet" href="style.css?v=60.0" />
 
 <!-- Favicons -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -424,7 +424,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
   <script>
     (() => {
-      const header = document.querySelector(".top-logo-bar");
       const links = [...document.querySelectorAll(".top-nav-link")];
       const sections = links.map(link => document.querySelector(link.getAttribute("href"))).filter(Boolean);
       const feedback = document.getElementById("navFeedback");
@@ -456,22 +455,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         }, { rootMargin: "-28% 0px -55% 0px", threshold: [0.08, 0.2, 0.4, 0.65] });
         sections.forEach(section => observer.observe(section));
       }
-
-      let ticking = false;
-      const updateHeader = () => {
-        if (header) header.classList.toggle("is-compact", window.scrollY > 90);
-        ticking = false;
-      };
-      window.addEventListener("scroll", () => {
-        if (!ticking) {
-          requestAnimationFrame(updateHeader);
-          ticking = true;
-        }
-      }, { passive: true });
-      updateHeader();
     })();
   </script>
 
-  <script src="script.js?v=6.0"></script>
+  <script src="script.js?v=7.0"></script>
 </body>
 </html>
