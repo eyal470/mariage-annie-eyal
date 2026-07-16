@@ -1921,7 +1921,7 @@ button {
 
   .hero {
     min-height: 100svh !important;
-    min-height: 100dvh !important;
+  
     align-items: flex-end !important;
     padding: 90px 16px 28px !important;
   }
@@ -2152,27 +2152,26 @@ button {
   }
 }
 
-/* ==========================================================
-   CORRECTION SCROLL IPHONE / SAFARI
-========================================================== */
+/* ===========================================================
+   CORRECTION SCROLL MOBILE (Android + iOS)
+=========================================================== */
 
 html {
-  width: 100%;
-  min-height: 100%;
-  overflow-x: clip;
-  overflow-y: visible;
-  scroll-behavior: auto;
-  -webkit-text-size-adjust: 100%;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: auto;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
-  width: 100%;
-  min-height: 100%;
-  overflow-x: clip;
-  overflow-y: visible;
-  position: relative;
-  -webkit-overflow-scrolling: touch;
-  touch-action: pan-y;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
 }
 
 main {
