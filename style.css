@@ -2188,11 +2188,7 @@ main {
     overflow: hidden;
   }
 
-  .top-logo-bar,
-  .music-player {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
+
 
   .top-logo-bar {
     backdrop-filter: none;
@@ -2592,5 +2588,21 @@ main {
 
   .location-photo-moulin {
     width: min(86%, 820px) !important;
+  }
+}
+
+
+
+
+/* TEST — stabilisation du scroll Chrome Android en portrait */
+@media (max-width: 760px) and (orientation: portrait) {
+  .hero {
+    min-height: 94vh !important;
+  }
+
+  .hero-bg {
+    inset: 0 !important;
+    transform: none !important;
+    will-change: auto !important;
   }
 }
