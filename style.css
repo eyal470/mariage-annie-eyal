@@ -2179,37 +2179,7 @@ main {
   overflow: visible;
 }
 
-/* Évite les bugs Safari liés au viewport dynamique */
-@media (max-width: 760px) {
-  .hero {
-    min-height: 100vh !important;
-    min-height: 100dvh !important;
-    overflow: hidden;
-  }
 
-  .top-logo-bar,
-  .music-player {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-
-  .top-logo-bar {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
-
-  .music-player {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
-
-  .luxury-card,
-  .luxury-card-inner,
-  .rsvp-premium-section,
-  .premium-rsvp {
-    transform: translateZ(0);
-  }
-}
 
 /* ==========================================
    Hommage discret
@@ -2759,4 +2729,34 @@ html {
 .top-nav-link:focus-visible i,
 .top-nav-link.is-active i {
   transform: scale(1.08);
+}
+
+/* ==========================================================
+   CORRECTION DES SACCADES AU SCROLL MOBILE
+========================================================== */
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 100svh !important;
+  }
+
+  .luxury-card,
+  .luxury-card-inner,
+  .rsvp-premium-section,
+  .premium-rsvp,
+  .top-logo-bar,
+  .music-player {
+    transform: none;
+    -webkit-transform: none;
+  }
+
+  .luxury-card::before {
+    animation: none !important;
+  }
+
+  .top-logo-bar,
+  .music-player {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
 }
