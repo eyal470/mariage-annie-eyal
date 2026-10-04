@@ -2594,14 +2594,31 @@ main {
 
 
 
-/* TEST — stabilisation du scroll Chrome Android en portrait */
+/* ==========================================================
+   HERO MOBILE — cadrage photo Annie & Eyal
+========================================================== */
+
 @media (max-width: 760px) and (orientation: portrait) {
+
   .hero {
     min-height: 94vh !important;
   }
 
   .hero-bg {
     inset: 0 !important;
+
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(23, 32, 51, .05) 0%,
+        rgba(23, 32, 51, .10) 42%,
+        rgba(23, 32, 51, .40) 70%,
+        rgba(23, 32, 51, .78) 100%
+      ),
+      url("nous.png") center top / 100% auto no-repeat !important;
+
+    background-color: #172033 !important;
+
     transform: none !important;
     will-change: auto !important;
   }
